@@ -1,0 +1,130 @@
+{
+  "instance_name": "all_merged_clusters_chengdu_min100",
+  "problem_size": 117,
+  "dro_parameters": {
+    "base_params": {
+      "epsilon": 0.1,
+      "M": 1000000,
+      "N": 50,
+      "lambda_reg": 0.01,
+      "uncertainty_std": 0.15,
+      "sample_strategy": "historical",
+      "dual_max_iter": 100,
+      "dual_lr": 0.01,
+      "num_eval_scenarios": 20,
+      "feasibility_penalty": 10.0,
+      "robustness_weight": 0.1,
+      "dual_tolerance": "1e-4",
+      "max_constraint_violation": "1e-3"
+    },
+    "adaptive_params": {
+      "epsilon": 0.1,
+      "M": 1000000,
+      "N": 50,
+      "lambda_reg": 0.01,
+      "uncertainty_std": 0.12,
+      "sample_strategy": "historical",
+      "dual_max_iter": 100,
+      "dual_lr": 0.01,
+      "num_eval_scenarios": 20,
+      "feasibility_penalty": 10.0,
+      "robustness_weight": 0.1,
+      "dual_tolerance": "1e-4",
+      "max_constraint_violation": "1e-3"
+    },
+    "adaptation_applied": true
+  },
+  "cost_analysis": {
+    "stage1_dro_cost": 15704515.0,
+    "final_total_cost": 12526648.037060548,
+    "routing_cost": 715545.0336914062,
+    "dro_penalty": 11811103.003369141,
+    "improvement": 3177866.9629394524
+  },
+  "uncertainty_analysis": {
+    "demand_variability": 0.09284427016973495,
+    "uncertainty_scenarios": 50,
+    "wasserstein_radius": 0.1,
+    "sample_strategy": "historical",
+    "penalty_to_routing_ratio": 3.356900930404663,
+    "stage1_cost": 15704515.0,
+    "stage2_routing_cost": 715545.0336914062,
+    "final_total_cost": 12526648.037060548,
+    "routing_improvement": 2888969.9663085938,
+    "lkh_optimization_time": 7.983996629714966,
+    "two_stage_improvement": 3177866.9629394524
+  },
+  "solution_details": {
+    "num_routes": 8,
+    "routes": [
+      [
+        60,
+        117,
+        67,
+        107,
+        83,
+        7,
+        97,
+        35,
+        20,
+        99
+      ],
+      [
+        23,
+        43,
+        39,
+        108,
+        62,
+        85,
+        22,
+        52,
+        54
+      ],
+      [
+        89,
+        48,
+        78
+      ],
+      [
+        18,
+        105,
+        82,
+        31,
+        101
+      ],
+      [
+        91,
+        16
+      ],
+      [
+        15,
+        50,
+        63,
+        13,
+        6,
+        110,
+        87,
+        29,
+        106,
+        106
+      ],
+      [
+        104,
+        75,
+        102,
+        80,
+        56
+      ],
+      [
+        32,
+        12,
+        45,
+        58
+      ]
+    ],
+    "total_customers": 48,
+    "avg_customers_per_route": 6.0
+  },
+  "coordinates": {
+    "0": [
+      

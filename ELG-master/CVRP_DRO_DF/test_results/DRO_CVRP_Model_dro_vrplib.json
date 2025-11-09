@@ -1,0 +1,51 @@
+[
+  {
+    "instance": "X-n101-k25",
+    "optimal": 27591,
+    "record": [
+      {
+        "run_idx": 0,
+        "best_cost": 42543.609375,
+        "routing_cost": 42424.0,
+        "dro_cost": 119.609375,
+        "scale": 100,
+        "gap": 0.5419379281287376,
+        "dro_params": {
+          "epsilon": 0.1,
+          "M": 10,
+          "N": 50,
+          "lambda_reg": 0.01,
+          "uncertainty_std": 0.15,
+          "sample_strategy": "historical",
+          "dual_max_iter": 100,
+          "dual_lr": 0.01,
+          "num_eval_scenarios": 20,
+          "feasibility_penalty": 10.0,
+          "robustness_weight": 0.1,
+          "dual_tolerance": "1e-4",
+          "max_constraint_violation": "1e-3"
+        }
+      }
+    ]
+  },
+  {
+    "<200": 54.19379281287377,
+    "200-1000": NaN,
+    "total": 54.19379281287377,
+    "dro_params": {
+      "epsilon": 0.1,
+      "M": 10,
+      "N": 50,
+      "lambda_reg": 0.01,
+      "uncertainty_std": 0.15,
+      "sample_strategy": "historical",
+      "dual_max_iter": 100,
+      "dual_lr": 0.01,
+      "num_eval_scenarios": 20,
+      "feasibility_penalty": 10.0,
+      "robustness_weight": 0.1,
+      "dual_tolerance": "1e-4",
+      "max_constraint_violation": "1e-3"
+    }
+  }
+]

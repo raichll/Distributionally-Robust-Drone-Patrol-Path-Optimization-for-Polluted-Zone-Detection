@@ -1,0 +1,208 @@
+{
+  "instance_name": "all_merged_clusters_chengdu_min100",
+  "problem_size": 117,
+  "dro_parameters": {
+    "base_params": {
+      "epsilon": 0.1,
+      "M": 1000000,
+      "N": 50,
+      "lambda_reg": 0.01,
+      "uncertainty_std": 0.15,
+      "sample_strategy": "historical",
+      "dual_max_iter": 100,
+      "dual_lr": 0.01,
+      "num_eval_scenarios": 20,
+      "feasibility_penalty": 10.0,
+      "robustness_weight": 0.1,
+      "dual_tolerance": "1e-4",
+      "max_constraint_violation": "1e-3"
+    },
+    "adaptive_params": {
+      "epsilon": 0.1,
+      "M": 1000000,
+      "N": 50,
+      "lambda_reg": 0.01,
+      "uncertainty_std": 0.12,
+      "sample_strategy": "historical",
+      "dual_max_iter": 100,
+      "dual_lr": 0.01,
+      "num_eval_scenarios": 20,
+      "feasibility_penalty": 10.0,
+      "robustness_weight": 0.1,
+      "dual_tolerance": "1e-4",
+      "max_constraint_violation": "1e-3"
+    },
+    "adaptation_applied": true
+  },
+  "cost_analysis": {
+    "stage1_dro_cost": 12953899.0,
+    "final_total_cost": 12609265.710809326,
+    "routing_cost": 1040596.0098266602,
+    "dro_penalty": 11568669.700982666,
+    "improvement": 344633.2891906742
+  },
+  "uncertainty_analysis": {
+    "demand_variability": 0.09284427016973495,
+    "uncertainty_scenarios": 50,
+    "wasserstein_radius": 0.1,
+    "sample_strategy": "historical",
+    "penalty_to_routing_ratio": 8.56784725189209,
+    "stage1_cost": 12953899.0,
+    "stage2_routing_cost": 1040596.0098266602,
+    "final_total_cost": 12609265.710809326,
+    "routing_improvement": 313302.99017333984,
+    "lkh_optimization_time": 6.032577991485596,
+    "two_stage_improvement": 344633.2891906742
+  },
+  "solution_details": {
+    "num_routes": 13,
+    "routes": [
+      [
+        11,
+        70,
+        16,
+        91,
+        43,
+        39,
+        108,
+        62,
+        85,
+        23
+      ],
+      [
+        21,
+        79,
+        52,
+        54
+      ],
+      [
+        3,
+        77,
+        47,
+        64,
+        8,
+        1,
+        109,
+        113
+      ],
+      [
+        36,
+        15,
+        63,
+        13,
+        37,
+        71,
+        76,
+        42,
+        94,
+        116
+      ],
+      [
+        59,
+        41,
+        84,
+        22,
+        57,
+        92,
+        4,
+        51
+      ],
+      [
+        73,
+        32,
+        12,
+        49,
+        103,
+        58,
+        90,
+        114,
+        111,
+        26
+      ],
+      [
+        82,
+        105,
+        101,
+        31,
+        55,
+        29,
+        87,
+        110,
+        6,
+        61
+      ],
+      [
+        96,
+        40,
+        115,
+        28,
+        98,
+        66
+      ],
+      [
+        27,
+        69,
+        5,
+        72,
+        25,
+        46,
+        44,
+        89,
+        53,
+        48
+      ],
+      [
+        34,
+        17,
+        78,
+        38,
+        30,
+        74,
+        9,
+        50,
+        24,
+        100
+      ],
+      [
+        33,
+        81,
+        95,
+        104,
+        65,
+        60,
+        93,
+        68,
+        56,
+        14
+      ],
+      [
+        106,
+        18,
+        45,
+        75,
+        102,
+        80,
+        86,
+        67,
+        117,
+        10
+      ],
+      [
+        19,
+        99,
+        20,
+        35,
+        97,
+        7,
+        83,
+        107,
+        2,
+        112
+      ]
+    ],
+    "total_customers": 116,
+    "avg_customers_per_route": 8.923076923076923
+  },
+  "coordinates": {
+    "0": [
+      

@@ -1,0 +1,17 @@
+{
+  "total_files": 6,
+  "successful_files": 0,
+  "failed_files": 6,
+  "failed_file_names": [
+    "all_merged_clusters_chengdu_min100",
+    "all_merged_clusters_chengdu_min150",
+    "all_merged_clusters_chengdu_min200",
+    "all_merged_clusters_chengdu_min30",
+    "all_merged_clusters_chengdu_min50",
+    "all_merged_clusters_chengdu_min80"
+  ],
+  "average_time": 0,
+  "total_time": 0.0,
+  "processing_times": [],
+  "results": []
+}

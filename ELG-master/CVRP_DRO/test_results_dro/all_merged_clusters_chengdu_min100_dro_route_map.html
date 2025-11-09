@@ -1,0 +1,4406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f6aa47d800a6c9f4ff43c75f04b6fcbd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f6aa47d800a6c9f4ff43c75f04b6fcbd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f6aa47d800a6c9f4ff43c75f04b6fcbd = L.map(
+                "map_f6aa47d800a6c9f4ff43c75f04b6fcbd",
+                {
+                    center: [30.619746610169486, 104.04632364406778],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_800ea5ef6649e60a76cffd1e7ade223b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_800ea5ef6649e60a76cffd1e7ade223b.addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+            var marker_80925fcd75478cbc23ac70880f7eb2ac = L.marker(
+                [30.67, 104.07],
+                {
+}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+            var icon_58c573910b206ddef9b4717a7525aec9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ec82ce95b974282ef45cc10f99cb599 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c877a3bb9688f7a27188aa66ddaf5c10 = $(`<div id="html_c877a3bb9688f7a27188aa66ddaf5c10" style="width: 100.0%; height: 100.0%;">DRO-CVRP Depot (Node 0)</div>`)[0];
+                popup_7ec82ce95b974282ef45cc10f99cb599.setContent(html_c877a3bb9688f7a27188aa66ddaf5c10);
+            
+        
+
+        marker_80925fcd75478cbc23ac70880f7eb2ac.bindPopup(popup_7ec82ce95b974282ef45cc10f99cb599)
+        ;
+
+        
+    
+    
+            marker_80925fcd75478cbc23ac70880f7eb2ac.bindTooltip(
+                `<div>
+                     Depot Location - DRO Optimized
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_80925fcd75478cbc23ac70880f7eb2ac.setIcon(icon_58c573910b206ddef9b4717a7525aec9);
+            
+    
+            var poly_line_1a5eb039f04c521b591747a672507f74 = L.polyline(
+                [[30.67, 104.07], [30.71059, 104.18354], [30.71833, 104.18488], [30.72605, 104.20314], [30.73178, 104.20357], [30.79309, 104.22533], [30.86019, 104.3265], [30.86116, 104.3187], [30.86528, 104.30868], [30.85924, 104.25476], [30.78292, 104.17873], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7795B3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_3d18deb44f547f9be2d90140b313a2da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd4ef850db8dc13b6362ae92d2750edb = $(`<div id="html_fd4ef850db8dc13b6362ae92d2750edb" style="width: 100.0%; height: 100.0%;">DRO Route #1</div>`)[0];
+                popup_3d18deb44f547f9be2d90140b313a2da.setContent(html_fd4ef850db8dc13b6362ae92d2750edb);
+            
+        
+
+        poly_line_1a5eb039f04c521b591747a672507f74.bindPopup(popup_3d18deb44f547f9be2d90140b313a2da)
+        ;
+
+        
+    
+    
+            poly_line_1a5eb039f04c521b591747a672507f74.bindTooltip(
+                `<div>
+                     DRO Route #1 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e705542a1289721f9fdea220f88be562 = L.circleMarker(
+                [30.71059, 104.18354],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_8624aae2f77fc57e5233bffb66663e60 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9dbb3f7deb868ec26f6c1c84732b3faa = $(`<div id="html_9dbb3f7deb868ec26f6c1c84732b3faa" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 1, Node 11</div>`)[0];
+                popup_8624aae2f77fc57e5233bffb66663e60.setContent(html_9dbb3f7deb868ec26f6c1c84732b3faa);
+            
+        
+
+        circle_marker_e705542a1289721f9fdea220f88be562.bindPopup(popup_8624aae2f77fc57e5233bffb66663e60)
+        ;
+
+        
+    
+    
+            circle_marker_e705542a1289721f9fdea220f88be562.bindTooltip(
+                `<div>
+                     Customer 11 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c51497285322bddcc738628aa33fd57c = L.circleMarker(
+                [30.71833, 104.18488],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_8a21e3ed9674807648fc662c7577d37d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b2e3d01b72d007f4f9ea257f915a936 = $(`<div id="html_2b2e3d01b72d007f4f9ea257f915a936" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 2, Node 70</div>`)[0];
+                popup_8a21e3ed9674807648fc662c7577d37d.setContent(html_2b2e3d01b72d007f4f9ea257f915a936);
+            
+        
+
+        circle_marker_c51497285322bddcc738628aa33fd57c.bindPopup(popup_8a21e3ed9674807648fc662c7577d37d)
+        ;
+
+        
+    
+    
+            circle_marker_c51497285322bddcc738628aa33fd57c.bindTooltip(
+                `<div>
+                     Customer 70 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fdf3a8bfb069b7ddfb56502e7dcedea = L.circleMarker(
+                [30.72605, 104.20314],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_3c0a712954d6e8058ba7cc23ebcb3da0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80f7ae0400718635307017c814e70769 = $(`<div id="html_80f7ae0400718635307017c814e70769" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 3, Node 16</div>`)[0];
+                popup_3c0a712954d6e8058ba7cc23ebcb3da0.setContent(html_80f7ae0400718635307017c814e70769);
+            
+        
+
+        circle_marker_9fdf3a8bfb069b7ddfb56502e7dcedea.bindPopup(popup_3c0a712954d6e8058ba7cc23ebcb3da0)
+        ;
+
+        
+    
+    
+            circle_marker_9fdf3a8bfb069b7ddfb56502e7dcedea.bindTooltip(
+                `<div>
+                     Customer 16 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab401e1801f06e550ef3416233f489e9 = L.circleMarker(
+                [30.73178, 104.20357],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_102f0a4d6e63e06f6a5065acc306c787 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fb6bb250e3557f514ade70a61e36fb3 = $(`<div id="html_8fb6bb250e3557f514ade70a61e36fb3" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 4, Node 91</div>`)[0];
+                popup_102f0a4d6e63e06f6a5065acc306c787.setContent(html_8fb6bb250e3557f514ade70a61e36fb3);
+            
+        
+
+        circle_marker_ab401e1801f06e550ef3416233f489e9.bindPopup(popup_102f0a4d6e63e06f6a5065acc306c787)
+        ;
+
+        
+    
+    
+            circle_marker_ab401e1801f06e550ef3416233f489e9.bindTooltip(
+                `<div>
+                     Customer 91 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_209bfc7f057bdc22e1903ca1bfa81f2a = L.circleMarker(
+                [30.79309, 104.22533],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_669447e9c4b40081bf52512faa88ae9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff6be8d934486e50f5e041f5a8e31d22 = $(`<div id="html_ff6be8d934486e50f5e041f5a8e31d22" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 5, Node 43</div>`)[0];
+                popup_669447e9c4b40081bf52512faa88ae9e.setContent(html_ff6be8d934486e50f5e041f5a8e31d22);
+            
+        
+
+        circle_marker_209bfc7f057bdc22e1903ca1bfa81f2a.bindPopup(popup_669447e9c4b40081bf52512faa88ae9e)
+        ;
+
+        
+    
+    
+            circle_marker_209bfc7f057bdc22e1903ca1bfa81f2a.bindTooltip(
+                `<div>
+                     Customer 43 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3990171dd9ad796ee42f9bc5fc1d6d2 = L.circleMarker(
+                [30.86019, 104.3265],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_b0eaf51ddde6b53a862dd4ed9877d5ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_237f9c99ec335d02960eb654f9502011 = $(`<div id="html_237f9c99ec335d02960eb654f9502011" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 6, Node 39</div>`)[0];
+                popup_b0eaf51ddde6b53a862dd4ed9877d5ba.setContent(html_237f9c99ec335d02960eb654f9502011);
+            
+        
+
+        circle_marker_d3990171dd9ad796ee42f9bc5fc1d6d2.bindPopup(popup_b0eaf51ddde6b53a862dd4ed9877d5ba)
+        ;
+
+        
+    
+    
+            circle_marker_d3990171dd9ad796ee42f9bc5fc1d6d2.bindTooltip(
+                `<div>
+                     Customer 39 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7bc5787b1d3c77245d674a92fa632806 = L.circleMarker(
+                [30.86116, 104.3187],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_66c8824a94e02b6af9c830f793e143a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82755ad9b050f55633905bba3128cd61 = $(`<div id="html_82755ad9b050f55633905bba3128cd61" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 7, Node 108</div>`)[0];
+                popup_66c8824a94e02b6af9c830f793e143a1.setContent(html_82755ad9b050f55633905bba3128cd61);
+            
+        
+
+        circle_marker_7bc5787b1d3c77245d674a92fa632806.bindPopup(popup_66c8824a94e02b6af9c830f793e143a1)
+        ;
+
+        
+    
+    
+            circle_marker_7bc5787b1d3c77245d674a92fa632806.bindTooltip(
+                `<div>
+                     Customer 108 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_afc28ee047f93a98c42d4092b92b0749 = L.circleMarker(
+                [30.86528, 104.30868],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_33c104fd991ca2436e0f50ca31561462 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2403cfd3d1bfd3f866a4bcadb85727f = $(`<div id="html_f2403cfd3d1bfd3f866a4bcadb85727f" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 8, Node 62</div>`)[0];
+                popup_33c104fd991ca2436e0f50ca31561462.setContent(html_f2403cfd3d1bfd3f866a4bcadb85727f);
+            
+        
+
+        circle_marker_afc28ee047f93a98c42d4092b92b0749.bindPopup(popup_33c104fd991ca2436e0f50ca31561462)
+        ;
+
+        
+    
+    
+            circle_marker_afc28ee047f93a98c42d4092b92b0749.bindTooltip(
+                `<div>
+                     Customer 62 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c290ca6624d182d4e7d153ece1c8b7f0 = L.circleMarker(
+                [30.85924, 104.25476],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_5213ca57e91b44c93a3378f35c54aea9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb053fe35fd18645eb641eb0acd54eaa = $(`<div id="html_eb053fe35fd18645eb641eb0acd54eaa" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 9, Node 85</div>`)[0];
+                popup_5213ca57e91b44c93a3378f35c54aea9.setContent(html_eb053fe35fd18645eb641eb0acd54eaa);
+            
+        
+
+        circle_marker_c290ca6624d182d4e7d153ece1c8b7f0.bindPopup(popup_5213ca57e91b44c93a3378f35c54aea9)
+        ;
+
+        
+    
+    
+            circle_marker_c290ca6624d182d4e7d153ece1c8b7f0.bindTooltip(
+                `<div>
+                     Customer 85 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3913e52f72bb75ccfd9250fe48717ec6 = L.circleMarker(
+                [30.78292, 104.17873],
+                {"bubblingMouseEvents": true, "color": "#7795B3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7795B3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c3d2b78c1715aba0315c76cf56e62179 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5c6efb63dccc418956d9d573d573550 = $(`<div id="html_b5c6efb63dccc418956d9d573d573550" style="width: 100.0%; height: 100.0%;">DRO Route #1, Stop 10, Node 23</div>`)[0];
+                popup_c3d2b78c1715aba0315c76cf56e62179.setContent(html_b5c6efb63dccc418956d9d573d573550);
+            
+        
+
+        circle_marker_3913e52f72bb75ccfd9250fe48717ec6.bindPopup(popup_c3d2b78c1715aba0315c76cf56e62179)
+        ;
+
+        
+    
+    
+            circle_marker_3913e52f72bb75ccfd9250fe48717ec6.bindTooltip(
+                `<div>
+                     Customer 23 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7f57838d2ec912f1f68603e713e014cc = L.polyline(
+                [[30.67, 104.07], [30.7522, 104.113], [30.77294, 104.12013], [30.76947, 104.12526], [30.75716, 104.11847], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#1C17FC", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1C17FC", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_dae412a9a3cc52c47243f706c01f2555 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1f81512efd2561aa9c4cad36015591a = $(`<div id="html_c1f81512efd2561aa9c4cad36015591a" style="width: 100.0%; height: 100.0%;">DRO Route #2</div>`)[0];
+                popup_dae412a9a3cc52c47243f706c01f2555.setContent(html_c1f81512efd2561aa9c4cad36015591a);
+            
+        
+
+        poly_line_7f57838d2ec912f1f68603e713e014cc.bindPopup(popup_dae412a9a3cc52c47243f706c01f2555)
+        ;
+
+        
+    
+    
+            poly_line_7f57838d2ec912f1f68603e713e014cc.bindTooltip(
+                `<div>
+                     DRO Route #2 - 4 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4820c77cb923f840a1401d761db4c829 = L.circleMarker(
+                [30.7522, 104.113],
+                {"bubblingMouseEvents": true, "color": "#1C17FC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1C17FC", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_3c9b4f8b58505ca76175a99d0a86a4c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86d6c3c0177d01bfa5a336744719650d = $(`<div id="html_86d6c3c0177d01bfa5a336744719650d" style="width: 100.0%; height: 100.0%;">DRO Route #2, Stop 1, Node 21</div>`)[0];
+                popup_3c9b4f8b58505ca76175a99d0a86a4c6.setContent(html_86d6c3c0177d01bfa5a336744719650d);
+            
+        
+
+        circle_marker_4820c77cb923f840a1401d761db4c829.bindPopup(popup_3c9b4f8b58505ca76175a99d0a86a4c6)
+        ;
+
+        
+    
+    
+            circle_marker_4820c77cb923f840a1401d761db4c829.bindTooltip(
+                `<div>
+                     Customer 21 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1379ee79c55605132021e51cf4e0209f = L.circleMarker(
+                [30.77294, 104.12013],
+                {"bubblingMouseEvents": true, "color": "#1C17FC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1C17FC", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_db7e52dde981ba92f57ffb078a5a2896 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d2884be33e1c1d6ebb07d246746becd = $(`<div id="html_7d2884be33e1c1d6ebb07d246746becd" style="width: 100.0%; height: 100.0%;">DRO Route #2, Stop 2, Node 79</div>`)[0];
+                popup_db7e52dde981ba92f57ffb078a5a2896.setContent(html_7d2884be33e1c1d6ebb07d246746becd);
+            
+        
+
+        circle_marker_1379ee79c55605132021e51cf4e0209f.bindPopup(popup_db7e52dde981ba92f57ffb078a5a2896)
+        ;
+
+        
+    
+    
+            circle_marker_1379ee79c55605132021e51cf4e0209f.bindTooltip(
+                `<div>
+                     Customer 79 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39ea0fadca287f812fbd4bd25253d570 = L.circleMarker(
+                [30.76947, 104.12526],
+                {"bubblingMouseEvents": true, "color": "#1C17FC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1C17FC", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_adc22190b336efbcb682918c36b68fcd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6893d1bde4004c1081e538fbd4bc7064 = $(`<div id="html_6893d1bde4004c1081e538fbd4bc7064" style="width: 100.0%; height: 100.0%;">DRO Route #2, Stop 3, Node 52</div>`)[0];
+                popup_adc22190b336efbcb682918c36b68fcd.setContent(html_6893d1bde4004c1081e538fbd4bc7064);
+            
+        
+
+        circle_marker_39ea0fadca287f812fbd4bd25253d570.bindPopup(popup_adc22190b336efbcb682918c36b68fcd)
+        ;
+
+        
+    
+    
+            circle_marker_39ea0fadca287f812fbd4bd25253d570.bindTooltip(
+                `<div>
+                     Customer 52 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a7e5940342d7786ef15ac5963d4b40a = L.circleMarker(
+                [30.75716, 104.11847],
+                {"bubblingMouseEvents": true, "color": "#1C17FC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1C17FC", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c9c01dc78a7b8e546c98f2d9cf6a163c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88319df01f91a654783849c495162bdc = $(`<div id="html_88319df01f91a654783849c495162bdc" style="width: 100.0%; height: 100.0%;">DRO Route #2, Stop 4, Node 54</div>`)[0];
+                popup_c9c01dc78a7b8e546c98f2d9cf6a163c.setContent(html_88319df01f91a654783849c495162bdc);
+            
+        
+
+        circle_marker_2a7e5940342d7786ef15ac5963d4b40a.bindPopup(popup_c9c01dc78a7b8e546c98f2d9cf6a163c)
+        ;
+
+        
+    
+    
+            circle_marker_2a7e5940342d7786ef15ac5963d4b40a.bindTooltip(
+                `<div>
+                     Customer 54 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_97564d575dc94acaf19081c5e476785c = L.polyline(
+                [[30.67, 104.07], [30.64957, 103.96947], [30.63702, 103.96477], [30.59161, 104.00748], [30.54117, 104.05018], [30.58136, 104.09344], [30.57949, 104.11402], [30.58433, 104.11589], [30.58727, 104.10622], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#CF203E", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_059206ab2cb6578b37115e978ad8d4f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2d88183ec07d2ba071a701b3d19cf4f = $(`<div id="html_f2d88183ec07d2ba071a701b3d19cf4f" style="width: 100.0%; height: 100.0%;">DRO Route #3</div>`)[0];
+                popup_059206ab2cb6578b37115e978ad8d4f4.setContent(html_f2d88183ec07d2ba071a701b3d19cf4f);
+            
+        
+
+        poly_line_97564d575dc94acaf19081c5e476785c.bindPopup(popup_059206ab2cb6578b37115e978ad8d4f4)
+        ;
+
+        
+    
+    
+            poly_line_97564d575dc94acaf19081c5e476785c.bindTooltip(
+                `<div>
+                     DRO Route #3 - 8 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ce0f250014ed4544bab70503a327dd4 = L.circleMarker(
+                [30.64957, 103.96947],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_eb4acc1171a8cb497c032b6f45dc6b40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1299669a631ff6c78a56e677eed80188 = $(`<div id="html_1299669a631ff6c78a56e677eed80188" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 1, Node 3</div>`)[0];
+                popup_eb4acc1171a8cb497c032b6f45dc6b40.setContent(html_1299669a631ff6c78a56e677eed80188);
+            
+        
+
+        circle_marker_2ce0f250014ed4544bab70503a327dd4.bindPopup(popup_eb4acc1171a8cb497c032b6f45dc6b40)
+        ;
+
+        
+    
+    
+            circle_marker_2ce0f250014ed4544bab70503a327dd4.bindTooltip(
+                `<div>
+                     Customer 3 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa4171f705771612856b50a5f0abd61f = L.circleMarker(
+                [30.63702, 103.96477],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_75d6102e29af584380110685001cb53a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9efe671c1af07847ff339d27a9865ff8 = $(`<div id="html_9efe671c1af07847ff339d27a9865ff8" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 2, Node 77</div>`)[0];
+                popup_75d6102e29af584380110685001cb53a.setContent(html_9efe671c1af07847ff339d27a9865ff8);
+            
+        
+
+        circle_marker_fa4171f705771612856b50a5f0abd61f.bindPopup(popup_75d6102e29af584380110685001cb53a)
+        ;
+
+        
+    
+    
+            circle_marker_fa4171f705771612856b50a5f0abd61f.bindTooltip(
+                `<div>
+                     Customer 77 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3691d1e916cffba1769efa54f652aab = L.circleMarker(
+                [30.59161, 104.00748],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a318a194a46e428b7aa4728adf0fc4bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a33abb48a7b98f5fad61656efdb768f8 = $(`<div id="html_a33abb48a7b98f5fad61656efdb768f8" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 3, Node 47</div>`)[0];
+                popup_a318a194a46e428b7aa4728adf0fc4bf.setContent(html_a33abb48a7b98f5fad61656efdb768f8);
+            
+        
+
+        circle_marker_b3691d1e916cffba1769efa54f652aab.bindPopup(popup_a318a194a46e428b7aa4728adf0fc4bf)
+        ;
+
+        
+    
+    
+            circle_marker_b3691d1e916cffba1769efa54f652aab.bindTooltip(
+                `<div>
+                     Customer 47 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bef3981aead108e4f9f9e572e61e52c7 = L.circleMarker(
+                [30.54117, 104.05018],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_0581a8ff85436d9161addd450bf505b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3fa404bf196d6385161eb946da2500ab = $(`<div id="html_3fa404bf196d6385161eb946da2500ab" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 4, Node 64</div>`)[0];
+                popup_0581a8ff85436d9161addd450bf505b5.setContent(html_3fa404bf196d6385161eb946da2500ab);
+            
+        
+
+        circle_marker_bef3981aead108e4f9f9e572e61e52c7.bindPopup(popup_0581a8ff85436d9161addd450bf505b5)
+        ;
+
+        
+    
+    
+            circle_marker_bef3981aead108e4f9f9e572e61e52c7.bindTooltip(
+                `<div>
+                     Customer 64 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f82723e39892edba1cf9fcb1e93acc3c = L.circleMarker(
+                [30.58136, 104.09344],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_db1737cb861b4f3011a53aaf8fd327d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6103dc81b5dc454b10572c89c1fec00 = $(`<div id="html_e6103dc81b5dc454b10572c89c1fec00" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 5, Node 8</div>`)[0];
+                popup_db1737cb861b4f3011a53aaf8fd327d5.setContent(html_e6103dc81b5dc454b10572c89c1fec00);
+            
+        
+
+        circle_marker_f82723e39892edba1cf9fcb1e93acc3c.bindPopup(popup_db1737cb861b4f3011a53aaf8fd327d5)
+        ;
+
+        
+    
+    
+            circle_marker_f82723e39892edba1cf9fcb1e93acc3c.bindTooltip(
+                `<div>
+                     Customer 8 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbe92641cd4f5c69254822b35dd19d04 = L.circleMarker(
+                [30.57949, 104.11402],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a2c5532ae63ec167aa235987a3cf6ca2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aac3d22978e9ad575380189f46b1e290 = $(`<div id="html_aac3d22978e9ad575380189f46b1e290" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 6, Node 1</div>`)[0];
+                popup_a2c5532ae63ec167aa235987a3cf6ca2.setContent(html_aac3d22978e9ad575380189f46b1e290);
+            
+        
+
+        circle_marker_cbe92641cd4f5c69254822b35dd19d04.bindPopup(popup_a2c5532ae63ec167aa235987a3cf6ca2)
+        ;
+
+        
+    
+    
+            circle_marker_cbe92641cd4f5c69254822b35dd19d04.bindTooltip(
+                `<div>
+                     Customer 1 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7ad004114a72381db1ff28cc4e68935c = L.circleMarker(
+                [30.58433, 104.11589],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_139cbc46200b63d3bc6c9f6fef23d805 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37dcc55ddea6bd26d402293d8a0fa197 = $(`<div id="html_37dcc55ddea6bd26d402293d8a0fa197" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 7, Node 109</div>`)[0];
+                popup_139cbc46200b63d3bc6c9f6fef23d805.setContent(html_37dcc55ddea6bd26d402293d8a0fa197);
+            
+        
+
+        circle_marker_7ad004114a72381db1ff28cc4e68935c.bindPopup(popup_139cbc46200b63d3bc6c9f6fef23d805)
+        ;
+
+        
+    
+    
+            circle_marker_7ad004114a72381db1ff28cc4e68935c.bindTooltip(
+                `<div>
+                     Customer 109 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51ebe6e9834cfd33cbbfb4767e6a40a6 = L.circleMarker(
+                [30.58727, 104.10622],
+                {"bubblingMouseEvents": true, "color": "#CF203E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CF203E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_09ed6bd0f897f67eaea395efa44d5bb8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45c991e0aeac2937d35da299b186eff7 = $(`<div id="html_45c991e0aeac2937d35da299b186eff7" style="width: 100.0%; height: 100.0%;">DRO Route #3, Stop 8, Node 113</div>`)[0];
+                popup_09ed6bd0f897f67eaea395efa44d5bb8.setContent(html_45c991e0aeac2937d35da299b186eff7);
+            
+        
+
+        circle_marker_51ebe6e9834cfd33cbbfb4767e6a40a6.bindPopup(popup_09ed6bd0f897f67eaea395efa44d5bb8)
+        ;
+
+        
+    
+    
+            circle_marker_51ebe6e9834cfd33cbbfb4767e6a40a6.bindTooltip(
+                `<div>
+                     Customer 113 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a84e843878d66a16b34af53b07f1ecb9 = L.polyline(
+                [[30.67, 104.07], [30.65872, 104.16482], [30.63881, 104.22152], [30.64502, 104.32353], [30.6445, 104.33323], [30.56642, 104.22393], [30.58311, 104.21479], [30.58203, 104.19841], [30.5997, 104.16155], [30.61523, 104.17081], [30.62258, 104.14952], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F55429", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a706c6a2852a91da9bb51cabdd167f0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae4e8bbbd23301bc92936d9c91725288 = $(`<div id="html_ae4e8bbbd23301bc92936d9c91725288" style="width: 100.0%; height: 100.0%;">DRO Route #4</div>`)[0];
+                popup_a706c6a2852a91da9bb51cabdd167f0e.setContent(html_ae4e8bbbd23301bc92936d9c91725288);
+            
+        
+
+        poly_line_a84e843878d66a16b34af53b07f1ecb9.bindPopup(popup_a706c6a2852a91da9bb51cabdd167f0e)
+        ;
+
+        
+    
+    
+            poly_line_a84e843878d66a16b34af53b07f1ecb9.bindTooltip(
+                `<div>
+                     DRO Route #4 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a00656471c484d645248bfc296d2d0eb = L.circleMarker(
+                [30.65872, 104.16482],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_95ba81938a8a1c75155c42047e859d6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_484c0927f7e27042de7cfed7a5669644 = $(`<div id="html_484c0927f7e27042de7cfed7a5669644" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 1, Node 36</div>`)[0];
+                popup_95ba81938a8a1c75155c42047e859d6b.setContent(html_484c0927f7e27042de7cfed7a5669644);
+            
+        
+
+        circle_marker_a00656471c484d645248bfc296d2d0eb.bindPopup(popup_95ba81938a8a1c75155c42047e859d6b)
+        ;
+
+        
+    
+    
+            circle_marker_a00656471c484d645248bfc296d2d0eb.bindTooltip(
+                `<div>
+                     Customer 36 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b89673e70bcbc31474491cc57e9ba9db = L.circleMarker(
+                [30.63881, 104.22152],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_54bf3796784b8bd38538c949d25cf0fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6d1c3a986fbf69194d9de5b9d338ac6 = $(`<div id="html_b6d1c3a986fbf69194d9de5b9d338ac6" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 2, Node 15</div>`)[0];
+                popup_54bf3796784b8bd38538c949d25cf0fc.setContent(html_b6d1c3a986fbf69194d9de5b9d338ac6);
+            
+        
+
+        circle_marker_b89673e70bcbc31474491cc57e9ba9db.bindPopup(popup_54bf3796784b8bd38538c949d25cf0fc)
+        ;
+
+        
+    
+    
+            circle_marker_b89673e70bcbc31474491cc57e9ba9db.bindTooltip(
+                `<div>
+                     Customer 15 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_428c963f02468f3c2e655d47cc59321e = L.circleMarker(
+                [30.64502, 104.32353],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c189dee8259152ececf32b90bd5e2cb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_634c7f6a4967660cceb878fb0cdded5a = $(`<div id="html_634c7f6a4967660cceb878fb0cdded5a" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 3, Node 63</div>`)[0];
+                popup_c189dee8259152ececf32b90bd5e2cb2.setContent(html_634c7f6a4967660cceb878fb0cdded5a);
+            
+        
+
+        circle_marker_428c963f02468f3c2e655d47cc59321e.bindPopup(popup_c189dee8259152ececf32b90bd5e2cb2)
+        ;
+
+        
+    
+    
+            circle_marker_428c963f02468f3c2e655d47cc59321e.bindTooltip(
+                `<div>
+                     Customer 63 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7af60fa74f84f51a3798ce8ebdb7feb1 = L.circleMarker(
+                [30.6445, 104.33323],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_0339cb6d33d50664fdd67c6454168e03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_511aee5d9ebdfa9c52d9eeea65954a68 = $(`<div id="html_511aee5d9ebdfa9c52d9eeea65954a68" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 4, Node 13</div>`)[0];
+                popup_0339cb6d33d50664fdd67c6454168e03.setContent(html_511aee5d9ebdfa9c52d9eeea65954a68);
+            
+        
+
+        circle_marker_7af60fa74f84f51a3798ce8ebdb7feb1.bindPopup(popup_0339cb6d33d50664fdd67c6454168e03)
+        ;
+
+        
+    
+    
+            circle_marker_7af60fa74f84f51a3798ce8ebdb7feb1.bindTooltip(
+                `<div>
+                     Customer 13 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_566563781ad6fa3812e869e3d546372d = L.circleMarker(
+                [30.56642, 104.22393],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_b316be1f7981ecc6366cc733659b7a79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c5613c8454354519b54d649d519b389 = $(`<div id="html_0c5613c8454354519b54d649d519b389" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 5, Node 37</div>`)[0];
+                popup_b316be1f7981ecc6366cc733659b7a79.setContent(html_0c5613c8454354519b54d649d519b389);
+            
+        
+
+        circle_marker_566563781ad6fa3812e869e3d546372d.bindPopup(popup_b316be1f7981ecc6366cc733659b7a79)
+        ;
+
+        
+    
+    
+            circle_marker_566563781ad6fa3812e869e3d546372d.bindTooltip(
+                `<div>
+                     Customer 37 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7d6a75ad8a39718844b21db7e5d628d = L.circleMarker(
+                [30.58311, 104.21479],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_f4739a0c202a6958148760e5662b9774 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f7bbe0a4d83ae4ecfe6f44d1482faab = $(`<div id="html_4f7bbe0a4d83ae4ecfe6f44d1482faab" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 6, Node 71</div>`)[0];
+                popup_f4739a0c202a6958148760e5662b9774.setContent(html_4f7bbe0a4d83ae4ecfe6f44d1482faab);
+            
+        
+
+        circle_marker_d7d6a75ad8a39718844b21db7e5d628d.bindPopup(popup_f4739a0c202a6958148760e5662b9774)
+        ;
+
+        
+    
+    
+            circle_marker_d7d6a75ad8a39718844b21db7e5d628d.bindTooltip(
+                `<div>
+                     Customer 71 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3066edfb1541ad1c64edb30b3d2975d5 = L.circleMarker(
+                [30.58203, 104.19841],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_34dbb15c27e8e5e4d5da07921b1c54eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d5375e00ef5fe86f180929d12d2b4ab = $(`<div id="html_3d5375e00ef5fe86f180929d12d2b4ab" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 7, Node 76</div>`)[0];
+                popup_34dbb15c27e8e5e4d5da07921b1c54eb.setContent(html_3d5375e00ef5fe86f180929d12d2b4ab);
+            
+        
+
+        circle_marker_3066edfb1541ad1c64edb30b3d2975d5.bindPopup(popup_34dbb15c27e8e5e4d5da07921b1c54eb)
+        ;
+
+        
+    
+    
+            circle_marker_3066edfb1541ad1c64edb30b3d2975d5.bindTooltip(
+                `<div>
+                     Customer 76 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c26376245c47b4b9b13e87be66b30b3 = L.circleMarker(
+                [30.5997, 104.16155],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_b906c13fa3330e2a2ff754a7706f3691 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57bc31db974d7c680445ac900ac84857 = $(`<div id="html_57bc31db974d7c680445ac900ac84857" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 8, Node 42</div>`)[0];
+                popup_b906c13fa3330e2a2ff754a7706f3691.setContent(html_57bc31db974d7c680445ac900ac84857);
+            
+        
+
+        circle_marker_9c26376245c47b4b9b13e87be66b30b3.bindPopup(popup_b906c13fa3330e2a2ff754a7706f3691)
+        ;
+
+        
+    
+    
+            circle_marker_9c26376245c47b4b9b13e87be66b30b3.bindTooltip(
+                `<div>
+                     Customer 42 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e4bb35416c0ab25f9cfd21f42e4230f = L.circleMarker(
+                [30.61523, 104.17081],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_ba7d67419be8b64c63c67f5d6c0788f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef32b6c333c614dff1d0eeb61e0699ff = $(`<div id="html_ef32b6c333c614dff1d0eeb61e0699ff" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 9, Node 94</div>`)[0];
+                popup_ba7d67419be8b64c63c67f5d6c0788f6.setContent(html_ef32b6c333c614dff1d0eeb61e0699ff);
+            
+        
+
+        circle_marker_7e4bb35416c0ab25f9cfd21f42e4230f.bindPopup(popup_ba7d67419be8b64c63c67f5d6c0788f6)
+        ;
+
+        
+    
+    
+            circle_marker_7e4bb35416c0ab25f9cfd21f42e4230f.bindTooltip(
+                `<div>
+                     Customer 94 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2a5cd681a6bb213ebc72f10b3afdf55 = L.circleMarker(
+                [30.62258, 104.14952],
+                {"bubblingMouseEvents": true, "color": "#F55429", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F55429", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_2c3e5ae79c2e42328967d5adbfcd1b3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_512a79cdafe671c3aa04c329473cae28 = $(`<div id="html_512a79cdafe671c3aa04c329473cae28" style="width: 100.0%; height: 100.0%;">DRO Route #4, Stop 10, Node 116</div>`)[0];
+                popup_2c3e5ae79c2e42328967d5adbfcd1b3c.setContent(html_512a79cdafe671c3aa04c329473cae28);
+            
+        
+
+        circle_marker_b2a5cd681a6bb213ebc72f10b3afdf55.bindPopup(popup_2c3e5ae79c2e42328967d5adbfcd1b3c)
+        ;
+
+        
+    
+    
+            circle_marker_b2a5cd681a6bb213ebc72f10b3afdf55.bindTooltip(
+                `<div>
+                     Customer 116 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_425e156969fd697bc3a69d1c4c8f6773 = L.polyline(
+                [[30.67, 104.07], [30.71244, 104.16599], [30.71757, 104.17658], [30.74138, 104.16881], [30.80592, 104.13506], [30.84786, 104.05603], [30.79474, 104.07764], [30.76851, 104.0698], [30.69114, 104.06967], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#6190CF", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_50fd7a76020244bd30cfe6bd22abd48d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0953cf29c27f3311d038b7773f12a53a = $(`<div id="html_0953cf29c27f3311d038b7773f12a53a" style="width: 100.0%; height: 100.0%;">DRO Route #5</div>`)[0];
+                popup_50fd7a76020244bd30cfe6bd22abd48d.setContent(html_0953cf29c27f3311d038b7773f12a53a);
+            
+        
+
+        poly_line_425e156969fd697bc3a69d1c4c8f6773.bindPopup(popup_50fd7a76020244bd30cfe6bd22abd48d)
+        ;
+
+        
+    
+    
+            poly_line_425e156969fd697bc3a69d1c4c8f6773.bindTooltip(
+                `<div>
+                     DRO Route #5 - 8 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3079a3b8e2dd768c9d4c83d42ea0747d = L.circleMarker(
+                [30.71244, 104.16599],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_bb67435e3f46fe289a6a16211ccd533c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_464f0b2fd379f77a7c9dd73f0e31f18d = $(`<div id="html_464f0b2fd379f77a7c9dd73f0e31f18d" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 1, Node 59</div>`)[0];
+                popup_bb67435e3f46fe289a6a16211ccd533c.setContent(html_464f0b2fd379f77a7c9dd73f0e31f18d);
+            
+        
+
+        circle_marker_3079a3b8e2dd768c9d4c83d42ea0747d.bindPopup(popup_bb67435e3f46fe289a6a16211ccd533c)
+        ;
+
+        
+    
+    
+            circle_marker_3079a3b8e2dd768c9d4c83d42ea0747d.bindTooltip(
+                `<div>
+                     Customer 59 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c28b3ca36cc5bd9515843876f76d87a2 = L.circleMarker(
+                [30.71757, 104.17658],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_31406441751ea8d6eae089d988baf928 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7e26547cc6741cf0c1abc26cc25af50 = $(`<div id="html_f7e26547cc6741cf0c1abc26cc25af50" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 2, Node 41</div>`)[0];
+                popup_31406441751ea8d6eae089d988baf928.setContent(html_f7e26547cc6741cf0c1abc26cc25af50);
+            
+        
+
+        circle_marker_c28b3ca36cc5bd9515843876f76d87a2.bindPopup(popup_31406441751ea8d6eae089d988baf928)
+        ;
+
+        
+    
+    
+            circle_marker_c28b3ca36cc5bd9515843876f76d87a2.bindTooltip(
+                `<div>
+                     Customer 41 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_128ea47680a4ee9ec60144859d34747d = L.circleMarker(
+                [30.74138, 104.16881],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_ad8eafc3fe57170210eddfb1d146fd7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c59184750befd3a9ee33e8eb061b08e = $(`<div id="html_7c59184750befd3a9ee33e8eb061b08e" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 3, Node 84</div>`)[0];
+                popup_ad8eafc3fe57170210eddfb1d146fd7f.setContent(html_7c59184750befd3a9ee33e8eb061b08e);
+            
+        
+
+        circle_marker_128ea47680a4ee9ec60144859d34747d.bindPopup(popup_ad8eafc3fe57170210eddfb1d146fd7f)
+        ;
+
+        
+    
+    
+            circle_marker_128ea47680a4ee9ec60144859d34747d.bindTooltip(
+                `<div>
+                     Customer 84 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24bf623b030a3ee7e57a7a66d79b8e06 = L.circleMarker(
+                [30.80592, 104.13506],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_caecbcce90c55b21479519de7ed816f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aab8cc1e89bb0e8ce25100f5a1bb5433 = $(`<div id="html_aab8cc1e89bb0e8ce25100f5a1bb5433" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 4, Node 22</div>`)[0];
+                popup_caecbcce90c55b21479519de7ed816f0.setContent(html_aab8cc1e89bb0e8ce25100f5a1bb5433);
+            
+        
+
+        circle_marker_24bf623b030a3ee7e57a7a66d79b8e06.bindPopup(popup_caecbcce90c55b21479519de7ed816f0)
+        ;
+
+        
+    
+    
+            circle_marker_24bf623b030a3ee7e57a7a66d79b8e06.bindTooltip(
+                `<div>
+                     Customer 22 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b7b834c510603c080d2277d6c7339f8 = L.circleMarker(
+                [30.84786, 104.05603],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_2e4660d14bc288f926619c160073bb90 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e3725e84be10a467222561a68a1e00b = $(`<div id="html_7e3725e84be10a467222561a68a1e00b" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 5, Node 57</div>`)[0];
+                popup_2e4660d14bc288f926619c160073bb90.setContent(html_7e3725e84be10a467222561a68a1e00b);
+            
+        
+
+        circle_marker_7b7b834c510603c080d2277d6c7339f8.bindPopup(popup_2e4660d14bc288f926619c160073bb90)
+        ;
+
+        
+    
+    
+            circle_marker_7b7b834c510603c080d2277d6c7339f8.bindTooltip(
+                `<div>
+                     Customer 57 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_761850d02fe9a28c180fe0ab600bfc37 = L.circleMarker(
+                [30.79474, 104.07764],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_4469825aac8f418a0a21cbf748522796 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4215a08e1d68602d1562b9e05c28790b = $(`<div id="html_4215a08e1d68602d1562b9e05c28790b" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 6, Node 92</div>`)[0];
+                popup_4469825aac8f418a0a21cbf748522796.setContent(html_4215a08e1d68602d1562b9e05c28790b);
+            
+        
+
+        circle_marker_761850d02fe9a28c180fe0ab600bfc37.bindPopup(popup_4469825aac8f418a0a21cbf748522796)
+        ;
+
+        
+    
+    
+            circle_marker_761850d02fe9a28c180fe0ab600bfc37.bindTooltip(
+                `<div>
+                     Customer 92 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8cf14c0adb8820b1aab76f2c6a9e74e5 = L.circleMarker(
+                [30.76851, 104.0698],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_688463b2df7e538b591c8ff4909c5067 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9eaf020f86dfa33e1a439fc1e769964 = $(`<div id="html_a9eaf020f86dfa33e1a439fc1e769964" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 7, Node 4</div>`)[0];
+                popup_688463b2df7e538b591c8ff4909c5067.setContent(html_a9eaf020f86dfa33e1a439fc1e769964);
+            
+        
+
+        circle_marker_8cf14c0adb8820b1aab76f2c6a9e74e5.bindPopup(popup_688463b2df7e538b591c8ff4909c5067)
+        ;
+
+        
+    
+    
+            circle_marker_8cf14c0adb8820b1aab76f2c6a9e74e5.bindTooltip(
+                `<div>
+                     Customer 4 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78cb4fc992d1e29e2abbfc9f5a7c4ad5 = L.circleMarker(
+                [30.69114, 104.06967],
+                {"bubblingMouseEvents": true, "color": "#6190CF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6190CF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_2997774e3589aa388dd551b2b4193ef1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc17308ba7cc7125a4fc830c838cf1d1 = $(`<div id="html_dc17308ba7cc7125a4fc830c838cf1d1" style="width: 100.0%; height: 100.0%;">DRO Route #5, Stop 8, Node 51</div>`)[0];
+                popup_2997774e3589aa388dd551b2b4193ef1.setContent(html_dc17308ba7cc7125a4fc830c838cf1d1);
+            
+        
+
+        circle_marker_78cb4fc992d1e29e2abbfc9f5a7c4ad5.bindPopup(popup_2997774e3589aa388dd551b2b4193ef1)
+        ;
+
+        
+    
+    
+            circle_marker_78cb4fc992d1e29e2abbfc9f5a7c4ad5.bindTooltip(
+                `<div>
+                     Customer 51 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3416b5fba5b051def05e891267b16e3d = L.polyline(
+                [[30.67, 104.07], [30.51308, 104.07992], [30.47619, 104.05078], [30.44605, 104.04417], [30.42783, 104.04686], [30.4556, 104.08361], [30.46714, 104.09978], [30.49127, 104.10687], [30.50679, 104.10935], [30.5242, 104.09252], [30.54107, 104.09599], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#56416E", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_74a4038505cdea306dd73dff6ccf7dd1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a2b34f0e383072f2acfa4f509a9563f = $(`<div id="html_7a2b34f0e383072f2acfa4f509a9563f" style="width: 100.0%; height: 100.0%;">DRO Route #6</div>`)[0];
+                popup_74a4038505cdea306dd73dff6ccf7dd1.setContent(html_7a2b34f0e383072f2acfa4f509a9563f);
+            
+        
+
+        poly_line_3416b5fba5b051def05e891267b16e3d.bindPopup(popup_74a4038505cdea306dd73dff6ccf7dd1)
+        ;
+
+        
+    
+    
+            poly_line_3416b5fba5b051def05e891267b16e3d.bindTooltip(
+                `<div>
+                     DRO Route #6 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_29c25586c27f341143d9457ab43c67d3 = L.circleMarker(
+                [30.51308, 104.07992],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_8901a5343b9b94388d3c7c7ae3d91921 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5f17c6dc91008a32b66f7cd31b96739 = $(`<div id="html_b5f17c6dc91008a32b66f7cd31b96739" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 1, Node 73</div>`)[0];
+                popup_8901a5343b9b94388d3c7c7ae3d91921.setContent(html_b5f17c6dc91008a32b66f7cd31b96739);
+            
+        
+
+        circle_marker_29c25586c27f341143d9457ab43c67d3.bindPopup(popup_8901a5343b9b94388d3c7c7ae3d91921)
+        ;
+
+        
+    
+    
+            circle_marker_29c25586c27f341143d9457ab43c67d3.bindTooltip(
+                `<div>
+                     Customer 73 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6dc16802e6e757547633bb1723d44ce8 = L.circleMarker(
+                [30.47619, 104.05078],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c75fba4ffa283a95ce3e6a57d8d72f8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15bf1abc3aead371f799f3fa8f163ce2 = $(`<div id="html_15bf1abc3aead371f799f3fa8f163ce2" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 2, Node 32</div>`)[0];
+                popup_c75fba4ffa283a95ce3e6a57d8d72f8e.setContent(html_15bf1abc3aead371f799f3fa8f163ce2);
+            
+        
+
+        circle_marker_6dc16802e6e757547633bb1723d44ce8.bindPopup(popup_c75fba4ffa283a95ce3e6a57d8d72f8e)
+        ;
+
+        
+    
+    
+            circle_marker_6dc16802e6e757547633bb1723d44ce8.bindTooltip(
+                `<div>
+                     Customer 32 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5adf4983090a1fb90db014e9cbaaf1bd = L.circleMarker(
+                [30.44605, 104.04417],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_d535421758cfab728fc40e967e9171a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b17f41f0f596eb30c68d89a5bba0532f = $(`<div id="html_b17f41f0f596eb30c68d89a5bba0532f" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 3, Node 12</div>`)[0];
+                popup_d535421758cfab728fc40e967e9171a3.setContent(html_b17f41f0f596eb30c68d89a5bba0532f);
+            
+        
+
+        circle_marker_5adf4983090a1fb90db014e9cbaaf1bd.bindPopup(popup_d535421758cfab728fc40e967e9171a3)
+        ;
+
+        
+    
+    
+            circle_marker_5adf4983090a1fb90db014e9cbaaf1bd.bindTooltip(
+                `<div>
+                     Customer 12 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c618dba1e8c6c1bfbfac971a59e2da0 = L.circleMarker(
+                [30.42783, 104.04686],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_eccea413f21f2ce1603bafc6f9bc6b63 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_963e550bb7eb44f2dc807323f2f496cf = $(`<div id="html_963e550bb7eb44f2dc807323f2f496cf" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 4, Node 49</div>`)[0];
+                popup_eccea413f21f2ce1603bafc6f9bc6b63.setContent(html_963e550bb7eb44f2dc807323f2f496cf);
+            
+        
+
+        circle_marker_3c618dba1e8c6c1bfbfac971a59e2da0.bindPopup(popup_eccea413f21f2ce1603bafc6f9bc6b63)
+        ;
+
+        
+    
+    
+            circle_marker_3c618dba1e8c6c1bfbfac971a59e2da0.bindTooltip(
+                `<div>
+                     Customer 49 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5c432bb9cde0d334cc90b8758bf2a9d = L.circleMarker(
+                [30.4556, 104.08361],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_02cb360c0bf5d96c4031c6f8ec81fa8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c6848a6cb5d4e1d922dbe8a6bc68f17 = $(`<div id="html_4c6848a6cb5d4e1d922dbe8a6bc68f17" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 5, Node 103</div>`)[0];
+                popup_02cb360c0bf5d96c4031c6f8ec81fa8e.setContent(html_4c6848a6cb5d4e1d922dbe8a6bc68f17);
+            
+        
+
+        circle_marker_a5c432bb9cde0d334cc90b8758bf2a9d.bindPopup(popup_02cb360c0bf5d96c4031c6f8ec81fa8e)
+        ;
+
+        
+    
+    
+            circle_marker_a5c432bb9cde0d334cc90b8758bf2a9d.bindTooltip(
+                `<div>
+                     Customer 103 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf7bcc479a633c69fbbea443a35cc5a4 = L.circleMarker(
+                [30.46714, 104.09978],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_b4aa19970c118948a4e084286e7a109c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8988c33816804d0235ad8de95bd9db3a = $(`<div id="html_8988c33816804d0235ad8de95bd9db3a" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 6, Node 58</div>`)[0];
+                popup_b4aa19970c118948a4e084286e7a109c.setContent(html_8988c33816804d0235ad8de95bd9db3a);
+            
+        
+
+        circle_marker_bf7bcc479a633c69fbbea443a35cc5a4.bindPopup(popup_b4aa19970c118948a4e084286e7a109c)
+        ;
+
+        
+    
+    
+            circle_marker_bf7bcc479a633c69fbbea443a35cc5a4.bindTooltip(
+                `<div>
+                     Customer 58 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_17fdad3832115f8a0eaab2d99cfbbb59 = L.circleMarker(
+                [30.49127, 104.10687],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_0550d5678e48aa27f4b2434dca7a7865 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df1ef9d2dab50cf9da0386989f32da25 = $(`<div id="html_df1ef9d2dab50cf9da0386989f32da25" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 7, Node 90</div>`)[0];
+                popup_0550d5678e48aa27f4b2434dca7a7865.setContent(html_df1ef9d2dab50cf9da0386989f32da25);
+            
+        
+
+        circle_marker_17fdad3832115f8a0eaab2d99cfbbb59.bindPopup(popup_0550d5678e48aa27f4b2434dca7a7865)
+        ;
+
+        
+    
+    
+            circle_marker_17fdad3832115f8a0eaab2d99cfbbb59.bindTooltip(
+                `<div>
+                     Customer 90 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ac4e3df0f51d225f72a13240e9dafe7 = L.circleMarker(
+                [30.50679, 104.10935],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_03234bef6f13a8a4f57b9fccfde6e6ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e772c885e6d31dd7ef006e0d82ef1bb = $(`<div id="html_0e772c885e6d31dd7ef006e0d82ef1bb" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 8, Node 114</div>`)[0];
+                popup_03234bef6f13a8a4f57b9fccfde6e6ad.setContent(html_0e772c885e6d31dd7ef006e0d82ef1bb);
+            
+        
+
+        circle_marker_5ac4e3df0f51d225f72a13240e9dafe7.bindPopup(popup_03234bef6f13a8a4f57b9fccfde6e6ad)
+        ;
+
+        
+    
+    
+            circle_marker_5ac4e3df0f51d225f72a13240e9dafe7.bindTooltip(
+                `<div>
+                     Customer 114 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c64580b5bdd1ca20c4720079daaf4dc = L.circleMarker(
+                [30.5242, 104.09252],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c38842fd2bca221bf30eefe9a1697483 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8c1858b4555a0cb2cb55e8a65e2a9ac = $(`<div id="html_c8c1858b4555a0cb2cb55e8a65e2a9ac" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 9, Node 111</div>`)[0];
+                popup_c38842fd2bca221bf30eefe9a1697483.setContent(html_c8c1858b4555a0cb2cb55e8a65e2a9ac);
+            
+        
+
+        circle_marker_6c64580b5bdd1ca20c4720079daaf4dc.bindPopup(popup_c38842fd2bca221bf30eefe9a1697483)
+        ;
+
+        
+    
+    
+            circle_marker_6c64580b5bdd1ca20c4720079daaf4dc.bindTooltip(
+                `<div>
+                     Customer 111 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_283c6943febe2260ff949fbe0e9e72fd = L.circleMarker(
+                [30.54107, 104.09599],
+                {"bubblingMouseEvents": true, "color": "#56416E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#56416E", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_56e913903bf2d28a66e703ed96628ff1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aef5c2b66dff4da491e116a9d6b76bc = $(`<div id="html_9aef5c2b66dff4da491e116a9d6b76bc" style="width: 100.0%; height: 100.0%;">DRO Route #6, Stop 10, Node 26</div>`)[0];
+                popup_56e913903bf2d28a66e703ed96628ff1.setContent(html_9aef5c2b66dff4da491e116a9d6b76bc);
+            
+        
+
+        circle_marker_283c6943febe2260ff949fbe0e9e72fd.bindPopup(popup_56e913903bf2d28a66e703ed96628ff1)
+        ;
+
+        
+    
+    
+            circle_marker_283c6943febe2260ff949fbe0e9e72fd.bindTooltip(
+                `<div>
+                     Customer 26 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_92612b36c2e959d58224de316b5c23d6 = L.polyline(
+                [[30.67, 104.07], [30.29867, 104.31206], [30.30289, 104.31576], [30.30655, 104.32729], [30.27693, 104.31939], [30.28422, 104.39211], [30.35358, 104.50925], [30.4204, 104.51286], [30.42985, 104.5221], [30.49364, 104.48904], [30.53119, 104.25548], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#5EC6D5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_1a953618ac73ecbdcbdc2a61b2c8a139 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5bf9bdc597dab775273188cc6880abbb = $(`<div id="html_5bf9bdc597dab775273188cc6880abbb" style="width: 100.0%; height: 100.0%;">DRO Route #7</div>`)[0];
+                popup_1a953618ac73ecbdcbdc2a61b2c8a139.setContent(html_5bf9bdc597dab775273188cc6880abbb);
+            
+        
+
+        poly_line_92612b36c2e959d58224de316b5c23d6.bindPopup(popup_1a953618ac73ecbdcbdc2a61b2c8a139)
+        ;
+
+        
+    
+    
+            poly_line_92612b36c2e959d58224de316b5c23d6.bindTooltip(
+                `<div>
+                     DRO Route #7 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71e0b927f2d3f77b83cfd6e2bc6522b5 = L.circleMarker(
+                [30.29867, 104.31206],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_e0249bf291a7314cafac7a67278b1050 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53249f22ba29c57673ab66249bc0c5b7 = $(`<div id="html_53249f22ba29c57673ab66249bc0c5b7" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 1, Node 82</div>`)[0];
+                popup_e0249bf291a7314cafac7a67278b1050.setContent(html_53249f22ba29c57673ab66249bc0c5b7);
+            
+        
+
+        circle_marker_71e0b927f2d3f77b83cfd6e2bc6522b5.bindPopup(popup_e0249bf291a7314cafac7a67278b1050)
+        ;
+
+        
+    
+    
+            circle_marker_71e0b927f2d3f77b83cfd6e2bc6522b5.bindTooltip(
+                `<div>
+                     Customer 82 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96688b621bb7f8cc650d8632d7952442 = L.circleMarker(
+                [30.30289, 104.31576],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_2319470dc7cd1ef2af266ee25292bb7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a682c688fc2c1fd102c16d1c2ceda04 = $(`<div id="html_6a682c688fc2c1fd102c16d1c2ceda04" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 2, Node 105</div>`)[0];
+                popup_2319470dc7cd1ef2af266ee25292bb7a.setContent(html_6a682c688fc2c1fd102c16d1c2ceda04);
+            
+        
+
+        circle_marker_96688b621bb7f8cc650d8632d7952442.bindPopup(popup_2319470dc7cd1ef2af266ee25292bb7a)
+        ;
+
+        
+    
+    
+            circle_marker_96688b621bb7f8cc650d8632d7952442.bindTooltip(
+                `<div>
+                     Customer 105 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa8e40b05771a85e0d2dd0c732bba31c = L.circleMarker(
+                [30.30655, 104.32729],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a73b2356b5d5b2cd2f818a3fc32fccdc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_251269bb410d78da4dbb6e57bae550bf = $(`<div id="html_251269bb410d78da4dbb6e57bae550bf" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 3, Node 101</div>`)[0];
+                popup_a73b2356b5d5b2cd2f818a3fc32fccdc.setContent(html_251269bb410d78da4dbb6e57bae550bf);
+            
+        
+
+        circle_marker_aa8e40b05771a85e0d2dd0c732bba31c.bindPopup(popup_a73b2356b5d5b2cd2f818a3fc32fccdc)
+        ;
+
+        
+    
+    
+            circle_marker_aa8e40b05771a85e0d2dd0c732bba31c.bindTooltip(
+                `<div>
+                     Customer 101 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a7fd3c8d7021858a67d9b6dc76fa2b3 = L.circleMarker(
+                [30.27693, 104.31939],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_b0e81041645a32bd26855bee5788757e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4775db797a0e9cdb84cee307a67589d0 = $(`<div id="html_4775db797a0e9cdb84cee307a67589d0" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 4, Node 31</div>`)[0];
+                popup_b0e81041645a32bd26855bee5788757e.setContent(html_4775db797a0e9cdb84cee307a67589d0);
+            
+        
+
+        circle_marker_2a7fd3c8d7021858a67d9b6dc76fa2b3.bindPopup(popup_b0e81041645a32bd26855bee5788757e)
+        ;
+
+        
+    
+    
+            circle_marker_2a7fd3c8d7021858a67d9b6dc76fa2b3.bindTooltip(
+                `<div>
+                     Customer 31 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ffa0a818c710b402c6ec0abb71178328 = L.circleMarker(
+                [30.28422, 104.39211],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_d97554b939c500de82e0cd2ce5137a6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75d561c34b41f5ec29da601c88888800 = $(`<div id="html_75d561c34b41f5ec29da601c88888800" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 5, Node 55</div>`)[0];
+                popup_d97554b939c500de82e0cd2ce5137a6a.setContent(html_75d561c34b41f5ec29da601c88888800);
+            
+        
+
+        circle_marker_ffa0a818c710b402c6ec0abb71178328.bindPopup(popup_d97554b939c500de82e0cd2ce5137a6a)
+        ;
+
+        
+    
+    
+            circle_marker_ffa0a818c710b402c6ec0abb71178328.bindTooltip(
+                `<div>
+                     Customer 55 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ba18cfb7494c038ec0f00fd477aba0b = L.circleMarker(
+                [30.35358, 104.50925],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_ed95d5b05f3a67af206660ea083636b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5255a538f34107cc95eedbc68be2366 = $(`<div id="html_e5255a538f34107cc95eedbc68be2366" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 6, Node 29</div>`)[0];
+                popup_ed95d5b05f3a67af206660ea083636b3.setContent(html_e5255a538f34107cc95eedbc68be2366);
+            
+        
+
+        circle_marker_5ba18cfb7494c038ec0f00fd477aba0b.bindPopup(popup_ed95d5b05f3a67af206660ea083636b3)
+        ;
+
+        
+    
+    
+            circle_marker_5ba18cfb7494c038ec0f00fd477aba0b.bindTooltip(
+                `<div>
+                     Customer 29 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f192a2120bd09d577f3152c5dc7dc9e6 = L.circleMarker(
+                [30.4204, 104.51286],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_0549388c1b74bc285315fe7b392795e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c616a826b21e58e3c12aa637aa7a1a2 = $(`<div id="html_0c616a826b21e58e3c12aa637aa7a1a2" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 7, Node 87</div>`)[0];
+                popup_0549388c1b74bc285315fe7b392795e2.setContent(html_0c616a826b21e58e3c12aa637aa7a1a2);
+            
+        
+
+        circle_marker_f192a2120bd09d577f3152c5dc7dc9e6.bindPopup(popup_0549388c1b74bc285315fe7b392795e2)
+        ;
+
+        
+    
+    
+            circle_marker_f192a2120bd09d577f3152c5dc7dc9e6.bindTooltip(
+                `<div>
+                     Customer 87 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_901ebb2c2c691e2a7576a37851a3c43c = L.circleMarker(
+                [30.42985, 104.5221],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_898818b60262386a9803dca11a2437a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f87b9c89eac01be5388bd25236da9c4 = $(`<div id="html_8f87b9c89eac01be5388bd25236da9c4" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 8, Node 110</div>`)[0];
+                popup_898818b60262386a9803dca11a2437a5.setContent(html_8f87b9c89eac01be5388bd25236da9c4);
+            
+        
+
+        circle_marker_901ebb2c2c691e2a7576a37851a3c43c.bindPopup(popup_898818b60262386a9803dca11a2437a5)
+        ;
+
+        
+    
+    
+            circle_marker_901ebb2c2c691e2a7576a37851a3c43c.bindTooltip(
+                `<div>
+                     Customer 110 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e426aedfecba8e9a452db82fefe5aba4 = L.circleMarker(
+                [30.49364, 104.48904],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_f7e6d2cf28ca74213906ce924e6699d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_631945a7e1d3cc1d4dbde2c8117e624d = $(`<div id="html_631945a7e1d3cc1d4dbde2c8117e624d" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 9, Node 6</div>`)[0];
+                popup_f7e6d2cf28ca74213906ce924e6699d1.setContent(html_631945a7e1d3cc1d4dbde2c8117e624d);
+            
+        
+
+        circle_marker_e426aedfecba8e9a452db82fefe5aba4.bindPopup(popup_f7e6d2cf28ca74213906ce924e6699d1)
+        ;
+
+        
+    
+    
+            circle_marker_e426aedfecba8e9a452db82fefe5aba4.bindTooltip(
+                `<div>
+                     Customer 6 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90769abb6bc48217c4f38c1ee0dae202 = L.circleMarker(
+                [30.53119, 104.25548],
+                {"bubblingMouseEvents": true, "color": "#5EC6D5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5EC6D5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_7bfb297c1e59caa67d48c41c7b94128a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40ca463d8807c433ff1c32da7bf563e8 = $(`<div id="html_40ca463d8807c433ff1c32da7bf563e8" style="width: 100.0%; height: 100.0%;">DRO Route #7, Stop 10, Node 61</div>`)[0];
+                popup_7bfb297c1e59caa67d48c41c7b94128a.setContent(html_40ca463d8807c433ff1c32da7bf563e8);
+            
+        
+
+        circle_marker_90769abb6bc48217c4f38c1ee0dae202.bindPopup(popup_7bfb297c1e59caa67d48c41c7b94128a)
+        ;
+
+        
+    
+    
+            circle_marker_90769abb6bc48217c4f38c1ee0dae202.bindTooltip(
+                `<div>
+                     Customer 61 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b2a859de06b78d86af5869a0696bcb7a = L.polyline(
+                [[30.67, 104.07], [30.68851, 103.97767], [30.71697, 103.92318], [30.703, 103.92114], [30.6839, 103.91726], [30.67578, 103.91443], [30.66269, 103.95772], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#F2BDB2", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F2BDB2", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_126ede89c21ecc33bb0813280367dd8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a081cc3acdd4dd44dca7e97c08786ce = $(`<div id="html_2a081cc3acdd4dd44dca7e97c08786ce" style="width: 100.0%; height: 100.0%;">DRO Route #8</div>`)[0];
+                popup_126ede89c21ecc33bb0813280367dd8a.setContent(html_2a081cc3acdd4dd44dca7e97c08786ce);
+            
+        
+
+        poly_line_b2a859de06b78d86af5869a0696bcb7a.bindPopup(popup_126ede89c21ecc33bb0813280367dd8a)
+        ;
+
+        
+    
+    
+            poly_line_b2a859de06b78d86af5869a0696bcb7a.bindTooltip(
+                `<div>
+                     DRO Route #8 - 6 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1e4d509f7b5f49487d79b407368a32b = L.circleMarker(
+                [30.68851, 103.97767],
+                {"bubblingMouseEvents": true, "color": "#F2BDB2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F2BDB2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_591d49fd0a6f1587f8f6275edbac1b8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bf5c3bb9aecfd5297bd9f310792c4d5 = $(`<div id="html_7bf5c3bb9aecfd5297bd9f310792c4d5" style="width: 100.0%; height: 100.0%;">DRO Route #8, Stop 1, Node 96</div>`)[0];
+                popup_591d49fd0a6f1587f8f6275edbac1b8d.setContent(html_7bf5c3bb9aecfd5297bd9f310792c4d5);
+            
+        
+
+        circle_marker_c1e4d509f7b5f49487d79b407368a32b.bindPopup(popup_591d49fd0a6f1587f8f6275edbac1b8d)
+        ;
+
+        
+    
+    
+            circle_marker_c1e4d509f7b5f49487d79b407368a32b.bindTooltip(
+                `<div>
+                     Customer 96 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f340bdd8857b4adcf766bab7d415e535 = L.circleMarker(
+                [30.71697, 103.92318],
+                {"bubblingMouseEvents": true, "color": "#F2BDB2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F2BDB2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_ea7ad91942de71cddb090275d4def75b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2c1212bc04f1cde43103ed33c81b9ff = $(`<div id="html_a2c1212bc04f1cde43103ed33c81b9ff" style="width: 100.0%; height: 100.0%;">DRO Route #8, Stop 2, Node 40</div>`)[0];
+                popup_ea7ad91942de71cddb090275d4def75b.setContent(html_a2c1212bc04f1cde43103ed33c81b9ff);
+            
+        
+
+        circle_marker_f340bdd8857b4adcf766bab7d415e535.bindPopup(popup_ea7ad91942de71cddb090275d4def75b)
+        ;
+
+        
+    
+    
+            circle_marker_f340bdd8857b4adcf766bab7d415e535.bindTooltip(
+                `<div>
+                     Customer 40 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55a45d6e6f00e03e11659577ef60a4c6 = L.circleMarker(
+                [30.703, 103.92114],
+                {"bubblingMouseEvents": true, "color": "#F2BDB2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F2BDB2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_4b71ad4689c8fa7c32ebd9a67106a20e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_936fa4c2cafe2e973f4c8f18c3717896 = $(`<div id="html_936fa4c2cafe2e973f4c8f18c3717896" style="width: 100.0%; height: 100.0%;">DRO Route #8, Stop 3, Node 115</div>`)[0];
+                popup_4b71ad4689c8fa7c32ebd9a67106a20e.setContent(html_936fa4c2cafe2e973f4c8f18c3717896);
+            
+        
+
+        circle_marker_55a45d6e6f00e03e11659577ef60a4c6.bindPopup(popup_4b71ad4689c8fa7c32ebd9a67106a20e)
+        ;
+
+        
+    
+    
+            circle_marker_55a45d6e6f00e03e11659577ef60a4c6.bindTooltip(
+                `<div>
+                     Customer 115 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95246ff71156f597f7b08f4966d7374f = L.circleMarker(
+                [30.6839, 103.91726],
+                {"bubblingMouseEvents": true, "color": "#F2BDB2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F2BDB2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_eea5a9fff22facaafc76627048650c8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51396ab260bd4373cab9fca74e746bf5 = $(`<div id="html_51396ab260bd4373cab9fca74e746bf5" style="width: 100.0%; height: 100.0%;">DRO Route #8, Stop 4, Node 28</div>`)[0];
+                popup_eea5a9fff22facaafc76627048650c8a.setContent(html_51396ab260bd4373cab9fca74e746bf5);
+            
+        
+
+        circle_marker_95246ff71156f597f7b08f4966d7374f.bindPopup(popup_eea5a9fff22facaafc76627048650c8a)
+        ;
+
+        
+    
+    
+            circle_marker_95246ff71156f597f7b08f4966d7374f.bindTooltip(
+                `<div>
+                     Customer 28 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec375e565366c57e6c5b686d964efd30 = L.circleMarker(
+                [30.67578, 103.91443],
+                {"bubblingMouseEvents": true, "color": "#F2BDB2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F2BDB2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c1b87a39106988dea36cde66bd6c2943 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3dc0cd856125bcc5c42c0f61937af2a = $(`<div id="html_f3dc0cd856125bcc5c42c0f61937af2a" style="width: 100.0%; height: 100.0%;">DRO Route #8, Stop 5, Node 98</div>`)[0];
+                popup_c1b87a39106988dea36cde66bd6c2943.setContent(html_f3dc0cd856125bcc5c42c0f61937af2a);
+            
+        
+
+        circle_marker_ec375e565366c57e6c5b686d964efd30.bindPopup(popup_c1b87a39106988dea36cde66bd6c2943)
+        ;
+
+        
+    
+    
+            circle_marker_ec375e565366c57e6c5b686d964efd30.bindTooltip(
+                `<div>
+                     Customer 98 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d5dda544f8aaaf1098eb1a3cac37cd6 = L.circleMarker(
+                [30.66269, 103.95772],
+                {"bubblingMouseEvents": true, "color": "#F2BDB2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F2BDB2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_31562ce08c8f0317b77662eb08489337 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa51c39723e9f4fb55f78ca1de8a3adc = $(`<div id="html_aa51c39723e9f4fb55f78ca1de8a3adc" style="width: 100.0%; height: 100.0%;">DRO Route #8, Stop 6, Node 66</div>`)[0];
+                popup_31562ce08c8f0317b77662eb08489337.setContent(html_aa51c39723e9f4fb55f78ca1de8a3adc);
+            
+        
+
+        circle_marker_7d5dda544f8aaaf1098eb1a3cac37cd6.bindPopup(popup_31562ce08c8f0317b77662eb08489337)
+        ;
+
+        
+    
+    
+            circle_marker_7d5dda544f8aaaf1098eb1a3cac37cd6.bindTooltip(
+                `<div>
+                     Customer 66 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bcb9f36819f983586a1b017de80637be = L.polyline(
+                [[30.67, 104.07], [30.61444, 103.93802], [30.61929, 103.93811], [30.63091, 103.91301], [30.6584, 103.9026], [30.6664, 103.89653], [30.66592, 103.88346], [30.63275, 103.81403], [30.70211, 103.87067], [30.77939, 103.87176], [30.80398, 103.86136], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#C28075", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_d0d19acbbb2379eb3d9b125c4b4db0a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9969f7a8fe1c734b8e0485cc0b773d7 = $(`<div id="html_a9969f7a8fe1c734b8e0485cc0b773d7" style="width: 100.0%; height: 100.0%;">DRO Route #9</div>`)[0];
+                popup_d0d19acbbb2379eb3d9b125c4b4db0a0.setContent(html_a9969f7a8fe1c734b8e0485cc0b773d7);
+            
+        
+
+        poly_line_bcb9f36819f983586a1b017de80637be.bindPopup(popup_d0d19acbbb2379eb3d9b125c4b4db0a0)
+        ;
+
+        
+    
+    
+            poly_line_bcb9f36819f983586a1b017de80637be.bindTooltip(
+                `<div>
+                     DRO Route #9 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5d554ddb51a8ba985357d02908633eb9 = L.circleMarker(
+                [30.61444, 103.93802],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a04a8efae27f448e38d1150d17e0b65d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d12588ed7b8ffa14df663de3929f1fc = $(`<div id="html_4d12588ed7b8ffa14df663de3929f1fc" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 1, Node 27</div>`)[0];
+                popup_a04a8efae27f448e38d1150d17e0b65d.setContent(html_4d12588ed7b8ffa14df663de3929f1fc);
+            
+        
+
+        circle_marker_5d554ddb51a8ba985357d02908633eb9.bindPopup(popup_a04a8efae27f448e38d1150d17e0b65d)
+        ;
+
+        
+    
+    
+            circle_marker_5d554ddb51a8ba985357d02908633eb9.bindTooltip(
+                `<div>
+                     Customer 27 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2ed5d21f9d70768e560c84b48074c49 = L.circleMarker(
+                [30.61929, 103.93811],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_235fce07cd6874047b057c0d90dbc1ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc285f41be2c7d9c233d7219a514d395 = $(`<div id="html_cc285f41be2c7d9c233d7219a514d395" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 2, Node 69</div>`)[0];
+                popup_235fce07cd6874047b057c0d90dbc1ca.setContent(html_cc285f41be2c7d9c233d7219a514d395);
+            
+        
+
+        circle_marker_f2ed5d21f9d70768e560c84b48074c49.bindPopup(popup_235fce07cd6874047b057c0d90dbc1ca)
+        ;
+
+        
+    
+    
+            circle_marker_f2ed5d21f9d70768e560c84b48074c49.bindTooltip(
+                `<div>
+                     Customer 69 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25b3abb8568bd63de7b63ffc83a4cf3f = L.circleMarker(
+                [30.63091, 103.91301],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_23ce9c12f74a30c1c60eb6081e5b8302 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5ef13711b6511d9e6eed9e540e4fdbd = $(`<div id="html_f5ef13711b6511d9e6eed9e540e4fdbd" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 3, Node 5</div>`)[0];
+                popup_23ce9c12f74a30c1c60eb6081e5b8302.setContent(html_f5ef13711b6511d9e6eed9e540e4fdbd);
+            
+        
+
+        circle_marker_25b3abb8568bd63de7b63ffc83a4cf3f.bindPopup(popup_23ce9c12f74a30c1c60eb6081e5b8302)
+        ;
+
+        
+    
+    
+            circle_marker_25b3abb8568bd63de7b63ffc83a4cf3f.bindTooltip(
+                `<div>
+                     Customer 5 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7ab1c210bb08870e6008b5c00493514 = L.circleMarker(
+                [30.6584, 103.9026],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_075887ed134288874f35bd90e997dc27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc532080c02e1feba6d9797c03cd13e1 = $(`<div id="html_cc532080c02e1feba6d9797c03cd13e1" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 4, Node 72</div>`)[0];
+                popup_075887ed134288874f35bd90e997dc27.setContent(html_cc532080c02e1feba6d9797c03cd13e1);
+            
+        
+
+        circle_marker_d7ab1c210bb08870e6008b5c00493514.bindPopup(popup_075887ed134288874f35bd90e997dc27)
+        ;
+
+        
+    
+    
+            circle_marker_d7ab1c210bb08870e6008b5c00493514.bindTooltip(
+                `<div>
+                     Customer 72 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dd58f773022e44c0d371fe1fae23a81c = L.circleMarker(
+                [30.6664, 103.89653],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_0654f43d797e6bba2f75f5f1e1f6e6cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad993ebd20257a7e4b49b3fb259b9a5d = $(`<div id="html_ad993ebd20257a7e4b49b3fb259b9a5d" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 5, Node 25</div>`)[0];
+                popup_0654f43d797e6bba2f75f5f1e1f6e6cc.setContent(html_ad993ebd20257a7e4b49b3fb259b9a5d);
+            
+        
+
+        circle_marker_dd58f773022e44c0d371fe1fae23a81c.bindPopup(popup_0654f43d797e6bba2f75f5f1e1f6e6cc)
+        ;
+
+        
+    
+    
+            circle_marker_dd58f773022e44c0d371fe1fae23a81c.bindTooltip(
+                `<div>
+                     Customer 25 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1adac41b3475782a0e2ef5cf24495aad = L.circleMarker(
+                [30.66592, 103.88346],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_76ec15dde3a9f80a1d1fad3275a88138 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51d26b25adf248e817418294ee187180 = $(`<div id="html_51d26b25adf248e817418294ee187180" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 6, Node 46</div>`)[0];
+                popup_76ec15dde3a9f80a1d1fad3275a88138.setContent(html_51d26b25adf248e817418294ee187180);
+            
+        
+
+        circle_marker_1adac41b3475782a0e2ef5cf24495aad.bindPopup(popup_76ec15dde3a9f80a1d1fad3275a88138)
+        ;
+
+        
+    
+    
+            circle_marker_1adac41b3475782a0e2ef5cf24495aad.bindTooltip(
+                `<div>
+                     Customer 46 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25ac717839ec16d28fce8fd644b603c0 = L.circleMarker(
+                [30.63275, 103.81403],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_0cc63c040ece8610004d20973f3aa813 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_880fa0790f234523e8738405d842ffef = $(`<div id="html_880fa0790f234523e8738405d842ffef" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 7, Node 44</div>`)[0];
+                popup_0cc63c040ece8610004d20973f3aa813.setContent(html_880fa0790f234523e8738405d842ffef);
+            
+        
+
+        circle_marker_25ac717839ec16d28fce8fd644b603c0.bindPopup(popup_0cc63c040ece8610004d20973f3aa813)
+        ;
+
+        
+    
+    
+            circle_marker_25ac717839ec16d28fce8fd644b603c0.bindTooltip(
+                `<div>
+                     Customer 44 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e28a13232daf441c9c44f5fe9750050 = L.circleMarker(
+                [30.70211, 103.87067],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_8216dfe2554a9e6d6c1f3867b7b095a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_946149a5637d69dd17c55585b462790a = $(`<div id="html_946149a5637d69dd17c55585b462790a" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 8, Node 89</div>`)[0];
+                popup_8216dfe2554a9e6d6c1f3867b7b095a5.setContent(html_946149a5637d69dd17c55585b462790a);
+            
+        
+
+        circle_marker_0e28a13232daf441c9c44f5fe9750050.bindPopup(popup_8216dfe2554a9e6d6c1f3867b7b095a5)
+        ;
+
+        
+    
+    
+            circle_marker_0e28a13232daf441c9c44f5fe9750050.bindTooltip(
+                `<div>
+                     Customer 89 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3da4089042b2f18a72c51b803b417758 = L.circleMarker(
+                [30.77939, 103.87176],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_92259456277783d93bbee7263b88d2ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f6050e8abed2ae6a10cdfe7c946b2b9 = $(`<div id="html_6f6050e8abed2ae6a10cdfe7c946b2b9" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 9, Node 53</div>`)[0];
+                popup_92259456277783d93bbee7263b88d2ba.setContent(html_6f6050e8abed2ae6a10cdfe7c946b2b9);
+            
+        
+
+        circle_marker_3da4089042b2f18a72c51b803b417758.bindPopup(popup_92259456277783d93bbee7263b88d2ba)
+        ;
+
+        
+    
+    
+            circle_marker_3da4089042b2f18a72c51b803b417758.bindTooltip(
+                `<div>
+                     Customer 53 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_369dbc7c1babfe66852472e43228fac3 = L.circleMarker(
+                [30.80398, 103.86136],
+                {"bubblingMouseEvents": true, "color": "#C28075", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C28075", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_746f81611df2a17d4300ee548489e3ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ff3a2ff2bf6bd2b2ac9f75311be3fab = $(`<div id="html_3ff3a2ff2bf6bd2b2ac9f75311be3fab" style="width: 100.0%; height: 100.0%;">DRO Route #9, Stop 10, Node 48</div>`)[0];
+                popup_746f81611df2a17d4300ee548489e3ac.setContent(html_3ff3a2ff2bf6bd2b2ac9f75311be3fab);
+            
+        
+
+        circle_marker_369dbc7c1babfe66852472e43228fac3.bindPopup(popup_746f81611df2a17d4300ee548489e3ac)
+        ;
+
+        
+    
+    
+            circle_marker_369dbc7c1babfe66852472e43228fac3.bindTooltip(
+                `<div>
+                     Customer 48 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1475b3d0dfe20bb215280bbfdad8f2f3 = L.polyline(
+                [[30.67, 104.07], [30.78517, 103.9815], [30.81054, 103.90541], [30.82475, 103.91271], [30.8353, 103.89985], [30.9055, 103.93572], [30.65298, 104.23773], [30.65056, 104.24278], [30.6456, 104.24403], [30.64651, 104.23542], [30.65141, 104.21427], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4F5892", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_1ae1f650a5da3b9a923c5669366d57ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92bf8e74f53534e3b99a7be871e3d559 = $(`<div id="html_92bf8e74f53534e3b99a7be871e3d559" style="width: 100.0%; height: 100.0%;">DRO Route #10</div>`)[0];
+                popup_1ae1f650a5da3b9a923c5669366d57ad.setContent(html_92bf8e74f53534e3b99a7be871e3d559);
+            
+        
+
+        poly_line_1475b3d0dfe20bb215280bbfdad8f2f3.bindPopup(popup_1ae1f650a5da3b9a923c5669366d57ad)
+        ;
+
+        
+    
+    
+            poly_line_1475b3d0dfe20bb215280bbfdad8f2f3.bindTooltip(
+                `<div>
+                     DRO Route #10 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ec99aad1f7368c04f78a36d002a270a = L.circleMarker(
+                [30.78517, 103.9815],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_728f7cdbf1f2ab5ac95b2462c670eb40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ff0ecf1a7f53a25f97190e34c7be8ad = $(`<div id="html_0ff0ecf1a7f53a25f97190e34c7be8ad" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 1, Node 34</div>`)[0];
+                popup_728f7cdbf1f2ab5ac95b2462c670eb40.setContent(html_0ff0ecf1a7f53a25f97190e34c7be8ad);
+            
+        
+
+        circle_marker_6ec99aad1f7368c04f78a36d002a270a.bindPopup(popup_728f7cdbf1f2ab5ac95b2462c670eb40)
+        ;
+
+        
+    
+    
+            circle_marker_6ec99aad1f7368c04f78a36d002a270a.bindTooltip(
+                `<div>
+                     Customer 34 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b317c7134871df7d9a8e44b7cf3a7446 = L.circleMarker(
+                [30.81054, 103.90541],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a1fb53e1be02bafba2a20535127e112e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3dcc8eb22b352cc020cbd6f12ba9c7ea = $(`<div id="html_3dcc8eb22b352cc020cbd6f12ba9c7ea" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 2, Node 17</div>`)[0];
+                popup_a1fb53e1be02bafba2a20535127e112e.setContent(html_3dcc8eb22b352cc020cbd6f12ba9c7ea);
+            
+        
+
+        circle_marker_b317c7134871df7d9a8e44b7cf3a7446.bindPopup(popup_a1fb53e1be02bafba2a20535127e112e)
+        ;
+
+        
+    
+    
+            circle_marker_b317c7134871df7d9a8e44b7cf3a7446.bindTooltip(
+                `<div>
+                     Customer 17 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_977a9b2546b7927bf0b2e34e2b1aeb1b = L.circleMarker(
+                [30.82475, 103.91271],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_d687519937604a12bb8afef9dc5a1b1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9078bdf3845f7337c128827796df7891 = $(`<div id="html_9078bdf3845f7337c128827796df7891" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 3, Node 78</div>`)[0];
+                popup_d687519937604a12bb8afef9dc5a1b1b.setContent(html_9078bdf3845f7337c128827796df7891);
+            
+        
+
+        circle_marker_977a9b2546b7927bf0b2e34e2b1aeb1b.bindPopup(popup_d687519937604a12bb8afef9dc5a1b1b)
+        ;
+
+        
+    
+    
+            circle_marker_977a9b2546b7927bf0b2e34e2b1aeb1b.bindTooltip(
+                `<div>
+                     Customer 78 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a2cb2a9b9d4133efc0ad66e85f94b00 = L.circleMarker(
+                [30.8353, 103.89985],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_aae88a2986933015f2a199d01ded3a0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7250ce2acc6f528030798a9d6be4c9d = $(`<div id="html_c7250ce2acc6f528030798a9d6be4c9d" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 4, Node 38</div>`)[0];
+                popup_aae88a2986933015f2a199d01ded3a0b.setContent(html_c7250ce2acc6f528030798a9d6be4c9d);
+            
+        
+
+        circle_marker_5a2cb2a9b9d4133efc0ad66e85f94b00.bindPopup(popup_aae88a2986933015f2a199d01ded3a0b)
+        ;
+
+        
+    
+    
+            circle_marker_5a2cb2a9b9d4133efc0ad66e85f94b00.bindTooltip(
+                `<div>
+                     Customer 38 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ffe23a758fba8c14d37898dc631098f = L.circleMarker(
+                [30.9055, 103.93572],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_d4f78ae04e3dfa2f39937ef241debbe5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8925bcac6f42dd8ed44ccb4b99430140 = $(`<div id="html_8925bcac6f42dd8ed44ccb4b99430140" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 5, Node 30</div>`)[0];
+                popup_d4f78ae04e3dfa2f39937ef241debbe5.setContent(html_8925bcac6f42dd8ed44ccb4b99430140);
+            
+        
+
+        circle_marker_1ffe23a758fba8c14d37898dc631098f.bindPopup(popup_d4f78ae04e3dfa2f39937ef241debbe5)
+        ;
+
+        
+    
+    
+            circle_marker_1ffe23a758fba8c14d37898dc631098f.bindTooltip(
+                `<div>
+                     Customer 30 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54aee959d9d98b7d937c79ad46269e9d = L.circleMarker(
+                [30.65298, 104.23773],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_ee98b06b73aeb0730cbf1623018eb02e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ef0682992ed6bb519a3857b4e070f6f = $(`<div id="html_2ef0682992ed6bb519a3857b4e070f6f" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 6, Node 74</div>`)[0];
+                popup_ee98b06b73aeb0730cbf1623018eb02e.setContent(html_2ef0682992ed6bb519a3857b4e070f6f);
+            
+        
+
+        circle_marker_54aee959d9d98b7d937c79ad46269e9d.bindPopup(popup_ee98b06b73aeb0730cbf1623018eb02e)
+        ;
+
+        
+    
+    
+            circle_marker_54aee959d9d98b7d937c79ad46269e9d.bindTooltip(
+                `<div>
+                     Customer 74 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76ec2c18eda015e541a66279e67e3caf = L.circleMarker(
+                [30.65056, 104.24278],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_92aa03bc9876bba55b400ecdfebb8f65 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87fc3921def0ed90f8fed4509edca365 = $(`<div id="html_87fc3921def0ed90f8fed4509edca365" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 7, Node 9</div>`)[0];
+                popup_92aa03bc9876bba55b400ecdfebb8f65.setContent(html_87fc3921def0ed90f8fed4509edca365);
+            
+        
+
+        circle_marker_76ec2c18eda015e541a66279e67e3caf.bindPopup(popup_92aa03bc9876bba55b400ecdfebb8f65)
+        ;
+
+        
+    
+    
+            circle_marker_76ec2c18eda015e541a66279e67e3caf.bindTooltip(
+                `<div>
+                     Customer 9 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_662058249e2b23f8636ccc5da2a0c694 = L.circleMarker(
+                [30.6456, 104.24403],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_bbdf97e4bdb65c78a5287bb79bbe1ce1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_250d9b32915eff14ce41b8ff4a8bb490 = $(`<div id="html_250d9b32915eff14ce41b8ff4a8bb490" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 8, Node 50</div>`)[0];
+                popup_bbdf97e4bdb65c78a5287bb79bbe1ce1.setContent(html_250d9b32915eff14ce41b8ff4a8bb490);
+            
+        
+
+        circle_marker_662058249e2b23f8636ccc5da2a0c694.bindPopup(popup_bbdf97e4bdb65c78a5287bb79bbe1ce1)
+        ;
+
+        
+    
+    
+            circle_marker_662058249e2b23f8636ccc5da2a0c694.bindTooltip(
+                `<div>
+                     Customer 50 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4b16c2cf58898fecc38e992b291a335 = L.circleMarker(
+                [30.64651, 104.23542],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_dad59b77f1a0d3edd407379d5b876c82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32c98241373bf9b72deb16f4409007ed = $(`<div id="html_32c98241373bf9b72deb16f4409007ed" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 9, Node 24</div>`)[0];
+                popup_dad59b77f1a0d3edd407379d5b876c82.setContent(html_32c98241373bf9b72deb16f4409007ed);
+            
+        
+
+        circle_marker_f4b16c2cf58898fecc38e992b291a335.bindPopup(popup_dad59b77f1a0d3edd407379d5b876c82)
+        ;
+
+        
+    
+    
+            circle_marker_f4b16c2cf58898fecc38e992b291a335.bindTooltip(
+                `<div>
+                     Customer 24 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87c0b7aaf83fe52b1a363c03efe5acfe = L.circleMarker(
+                [30.65141, 104.21427],
+                {"bubblingMouseEvents": true, "color": "#4F5892", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4F5892", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_25f28ed81ec180aa3d76f1a26c136b00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11317bf8b228fcf93ff3eaa0758e51f3 = $(`<div id="html_11317bf8b228fcf93ff3eaa0758e51f3" style="width: 100.0%; height: 100.0%;">DRO Route #10, Stop 10, Node 100</div>`)[0];
+                popup_25f28ed81ec180aa3d76f1a26c136b00.setContent(html_11317bf8b228fcf93ff3eaa0758e51f3);
+            
+        
+
+        circle_marker_87c0b7aaf83fe52b1a363c03efe5acfe.bindPopup(popup_25f28ed81ec180aa3d76f1a26c136b00)
+        ;
+
+        
+    
+    
+            circle_marker_87c0b7aaf83fe52b1a363c03efe5acfe.bindTooltip(
+                `<div>
+                     Customer 100 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8c3fcbb0bc5c7376626ba648de610e92 = L.polyline(
+                [[30.67, 104.07], [30.59339, 104.04116], [30.54226, 103.97212], [30.5174, 103.95988], [30.42798, 103.95232], [30.51373, 103.89312], [30.52852, 103.88701], [30.53506, 103.86715], [30.55638, 103.88831], [30.54339, 103.90906], [30.62772, 103.98844], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FD4DF7", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_db400f3f8766e4c765e3ae1c78d848a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c81c620715b72e1ba07e085fb3a05f6 = $(`<div id="html_8c81c620715b72e1ba07e085fb3a05f6" style="width: 100.0%; height: 100.0%;">DRO Route #11</div>`)[0];
+                popup_db400f3f8766e4c765e3ae1c78d848a8.setContent(html_8c81c620715b72e1ba07e085fb3a05f6);
+            
+        
+
+        poly_line_8c3fcbb0bc5c7376626ba648de610e92.bindPopup(popup_db400f3f8766e4c765e3ae1c78d848a8)
+        ;
+
+        
+    
+    
+            poly_line_8c3fcbb0bc5c7376626ba648de610e92.bindTooltip(
+                `<div>
+                     DRO Route #11 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f0276d7d05d1363355a68185ecbaf92 = L.circleMarker(
+                [30.59339, 104.04116],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_2131b9cfee1998762e0a1628c62dc4a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a314860d125e884e79336b2d462728e5 = $(`<div id="html_a314860d125e884e79336b2d462728e5" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 1, Node 33</div>`)[0];
+                popup_2131b9cfee1998762e0a1628c62dc4a9.setContent(html_a314860d125e884e79336b2d462728e5);
+            
+        
+
+        circle_marker_6f0276d7d05d1363355a68185ecbaf92.bindPopup(popup_2131b9cfee1998762e0a1628c62dc4a9)
+        ;
+
+        
+    
+    
+            circle_marker_6f0276d7d05d1363355a68185ecbaf92.bindTooltip(
+                `<div>
+                     Customer 33 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dda94d675f6a078a186a5934cc259d5c = L.circleMarker(
+                [30.54226, 103.97212],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a918a31ce932114b1e5ff144e2e4db3f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d2ca964d73c61bcccfe07cc88bdea34 = $(`<div id="html_0d2ca964d73c61bcccfe07cc88bdea34" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 2, Node 81</div>`)[0];
+                popup_a918a31ce932114b1e5ff144e2e4db3f.setContent(html_0d2ca964d73c61bcccfe07cc88bdea34);
+            
+        
+
+        circle_marker_dda94d675f6a078a186a5934cc259d5c.bindPopup(popup_a918a31ce932114b1e5ff144e2e4db3f)
+        ;
+
+        
+    
+    
+            circle_marker_dda94d675f6a078a186a5934cc259d5c.bindTooltip(
+                `<div>
+                     Customer 81 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7aab8186c63aa972556cbe298138190 = L.circleMarker(
+                [30.5174, 103.95988],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_673f0796a6fce8d49115c8808c2942ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e5259ddf2ba5905e7d0556534062147 = $(`<div id="html_4e5259ddf2ba5905e7d0556534062147" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 3, Node 95</div>`)[0];
+                popup_673f0796a6fce8d49115c8808c2942ef.setContent(html_4e5259ddf2ba5905e7d0556534062147);
+            
+        
+
+        circle_marker_c7aab8186c63aa972556cbe298138190.bindPopup(popup_673f0796a6fce8d49115c8808c2942ef)
+        ;
+
+        
+    
+    
+            circle_marker_c7aab8186c63aa972556cbe298138190.bindTooltip(
+                `<div>
+                     Customer 95 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d1d8647d50e57bc1ad8459280fe010f = L.circleMarker(
+                [30.42798, 103.95232],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_4bfad6e5fb7d36d775243a43f62523e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fe2c0cdb1b2f73cc822360a3eab2dd0 = $(`<div id="html_0fe2c0cdb1b2f73cc822360a3eab2dd0" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 4, Node 104</div>`)[0];
+                popup_4bfad6e5fb7d36d775243a43f62523e4.setContent(html_0fe2c0cdb1b2f73cc822360a3eab2dd0);
+            
+        
+
+        circle_marker_9d1d8647d50e57bc1ad8459280fe010f.bindPopup(popup_4bfad6e5fb7d36d775243a43f62523e4)
+        ;
+
+        
+    
+    
+            circle_marker_9d1d8647d50e57bc1ad8459280fe010f.bindTooltip(
+                `<div>
+                     Customer 104 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1124df73ad27cc7a6efcad3e217b4746 = L.circleMarker(
+                [30.51373, 103.89312],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_979723fcaa2abeb935cf7fb245266415 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b16f188b50eede8367454d696e9110d4 = $(`<div id="html_b16f188b50eede8367454d696e9110d4" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 5, Node 65</div>`)[0];
+                popup_979723fcaa2abeb935cf7fb245266415.setContent(html_b16f188b50eede8367454d696e9110d4);
+            
+        
+
+        circle_marker_1124df73ad27cc7a6efcad3e217b4746.bindPopup(popup_979723fcaa2abeb935cf7fb245266415)
+        ;
+
+        
+    
+    
+            circle_marker_1124df73ad27cc7a6efcad3e217b4746.bindTooltip(
+                `<div>
+                     Customer 65 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_747300106564e23df247ffc6780971e5 = L.circleMarker(
+                [30.52852, 103.88701],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_158e006af776cd22cbcf2af518c14c54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65ded31ce9e61afcc2bc8be8a764d078 = $(`<div id="html_65ded31ce9e61afcc2bc8be8a764d078" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 6, Node 60</div>`)[0];
+                popup_158e006af776cd22cbcf2af518c14c54.setContent(html_65ded31ce9e61afcc2bc8be8a764d078);
+            
+        
+
+        circle_marker_747300106564e23df247ffc6780971e5.bindPopup(popup_158e006af776cd22cbcf2af518c14c54)
+        ;
+
+        
+    
+    
+            circle_marker_747300106564e23df247ffc6780971e5.bindTooltip(
+                `<div>
+                     Customer 60 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6c11cad28e3089290b9adf3d31d2be1 = L.circleMarker(
+                [30.53506, 103.86715],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c9c721d48ea1a8c8b68d53c727898167 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7dcc9d0ce54666db1a2f744e15825a6e = $(`<div id="html_7dcc9d0ce54666db1a2f744e15825a6e" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 7, Node 93</div>`)[0];
+                popup_c9c721d48ea1a8c8b68d53c727898167.setContent(html_7dcc9d0ce54666db1a2f744e15825a6e);
+            
+        
+
+        circle_marker_f6c11cad28e3089290b9adf3d31d2be1.bindPopup(popup_c9c721d48ea1a8c8b68d53c727898167)
+        ;
+
+        
+    
+    
+            circle_marker_f6c11cad28e3089290b9adf3d31d2be1.bindTooltip(
+                `<div>
+                     Customer 93 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e8560776364011a3bad78880b1397b8 = L.circleMarker(
+                [30.55638, 103.88831],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a0375db04c90ec55f23c38313c6cc123 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0581df1776fa46c8a6cb0eaf49bc3abe = $(`<div id="html_0581df1776fa46c8a6cb0eaf49bc3abe" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 8, Node 68</div>`)[0];
+                popup_a0375db04c90ec55f23c38313c6cc123.setContent(html_0581df1776fa46c8a6cb0eaf49bc3abe);
+            
+        
+
+        circle_marker_0e8560776364011a3bad78880b1397b8.bindPopup(popup_a0375db04c90ec55f23c38313c6cc123)
+        ;
+
+        
+    
+    
+            circle_marker_0e8560776364011a3bad78880b1397b8.bindTooltip(
+                `<div>
+                     Customer 68 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7db3b61655ce70ee331b009551c6e4c = L.circleMarker(
+                [30.54339, 103.90906],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_7874f50b6377dd2ded0c1a2c78a5c655 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e64fc91960a227e7b36d739316b6f595 = $(`<div id="html_e64fc91960a227e7b36d739316b6f595" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 9, Node 56</div>`)[0];
+                popup_7874f50b6377dd2ded0c1a2c78a5c655.setContent(html_e64fc91960a227e7b36d739316b6f595);
+            
+        
+
+        circle_marker_d7db3b61655ce70ee331b009551c6e4c.bindPopup(popup_7874f50b6377dd2ded0c1a2c78a5c655)
+        ;
+
+        
+    
+    
+            circle_marker_d7db3b61655ce70ee331b009551c6e4c.bindTooltip(
+                `<div>
+                     Customer 56 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77613ddae2414e7e43d76f77487adf4e = L.circleMarker(
+                [30.62772, 103.98844],
+                {"bubblingMouseEvents": true, "color": "#FD4DF7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD4DF7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_1fbeee11624d7937405239c6761f29d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99969269fcf063b54ddce2d98c0884c5 = $(`<div id="html_99969269fcf063b54ddce2d98c0884c5" style="width: 100.0%; height: 100.0%;">DRO Route #11, Stop 10, Node 14</div>`)[0];
+                popup_1fbeee11624d7937405239c6761f29d8.setContent(html_99969269fcf063b54ddce2d98c0884c5);
+            
+        
+
+        circle_marker_77613ddae2414e7e43d76f77487adf4e.bindPopup(popup_1fbeee11624d7937405239c6761f29d8)
+        ;
+
+        
+    
+    
+            circle_marker_77613ddae2414e7e43d76f77487adf4e.bindTooltip(
+                `<div>
+                     Customer 14 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f177ef2af0d27775c543c74b501ea99b = L.polyline(
+                [[30.67, 104.07], [30.5252, 104.22614], [30.48429, 104.17292], [30.41876, 104.06129], [30.3665, 103.96936], [30.36929, 103.91636], [30.40436, 103.87998], [30.35929, 103.83827], [30.22105, 103.55317], [30.3388, 103.67759], [30.43744, 103.85023], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F1E3D8", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c449d25b4bab18ee14cb25a4cd719418 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5821c3488376d0e762bbea0701c708b1 = $(`<div id="html_5821c3488376d0e762bbea0701c708b1" style="width: 100.0%; height: 100.0%;">DRO Route #12</div>`)[0];
+                popup_c449d25b4bab18ee14cb25a4cd719418.setContent(html_5821c3488376d0e762bbea0701c708b1);
+            
+        
+
+        poly_line_f177ef2af0d27775c543c74b501ea99b.bindPopup(popup_c449d25b4bab18ee14cb25a4cd719418)
+        ;
+
+        
+    
+    
+            poly_line_f177ef2af0d27775c543c74b501ea99b.bindTooltip(
+                `<div>
+                     DRO Route #12 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2445b26ba6465c252da27b9a05b649d = L.circleMarker(
+                [30.5252, 104.22614],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_7d755520f34dcc6759798edc4e423e23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8646fad622ec13ef095ed9e0ec1936c3 = $(`<div id="html_8646fad622ec13ef095ed9e0ec1936c3" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 1, Node 106</div>`)[0];
+                popup_7d755520f34dcc6759798edc4e423e23.setContent(html_8646fad622ec13ef095ed9e0ec1936c3);
+            
+        
+
+        circle_marker_d2445b26ba6465c252da27b9a05b649d.bindPopup(popup_7d755520f34dcc6759798edc4e423e23)
+        ;
+
+        
+    
+    
+            circle_marker_d2445b26ba6465c252da27b9a05b649d.bindTooltip(
+                `<div>
+                     Customer 106 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_727299e1f377693922a9d7e784440f50 = L.circleMarker(
+                [30.48429, 104.17292],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_49ccb3bc4e0a5b94d5471565983833ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5134b93bd267b82444d81da1b819e81 = $(`<div id="html_a5134b93bd267b82444d81da1b819e81" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 2, Node 18</div>`)[0];
+                popup_49ccb3bc4e0a5b94d5471565983833ae.setContent(html_a5134b93bd267b82444d81da1b819e81);
+            
+        
+
+        circle_marker_727299e1f377693922a9d7e784440f50.bindPopup(popup_49ccb3bc4e0a5b94d5471565983833ae)
+        ;
+
+        
+    
+    
+            circle_marker_727299e1f377693922a9d7e784440f50.bindTooltip(
+                `<div>
+                     Customer 18 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30c4303cff3009017d5d71d3335cb64a = L.circleMarker(
+                [30.41876, 104.06129],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_921a7d9be88c4d47ebbd880566b86adf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18e668a87547c5b0bcac75688ac69621 = $(`<div id="html_18e668a87547c5b0bcac75688ac69621" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 3, Node 45</div>`)[0];
+                popup_921a7d9be88c4d47ebbd880566b86adf.setContent(html_18e668a87547c5b0bcac75688ac69621);
+            
+        
+
+        circle_marker_30c4303cff3009017d5d71d3335cb64a.bindPopup(popup_921a7d9be88c4d47ebbd880566b86adf)
+        ;
+
+        
+    
+    
+            circle_marker_30c4303cff3009017d5d71d3335cb64a.bindTooltip(
+                `<div>
+                     Customer 45 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6da7e2df926d85ed60c0fa962a42a671 = L.circleMarker(
+                [30.3665, 103.96936],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_990c798da4d5df98a8dd3dfec7435ded = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddc1c2055fb3d545ed70d228070a1e8a = $(`<div id="html_ddc1c2055fb3d545ed70d228070a1e8a" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 4, Node 75</div>`)[0];
+                popup_990c798da4d5df98a8dd3dfec7435ded.setContent(html_ddc1c2055fb3d545ed70d228070a1e8a);
+            
+        
+
+        circle_marker_6da7e2df926d85ed60c0fa962a42a671.bindPopup(popup_990c798da4d5df98a8dd3dfec7435ded)
+        ;
+
+        
+    
+    
+            circle_marker_6da7e2df926d85ed60c0fa962a42a671.bindTooltip(
+                `<div>
+                     Customer 75 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9bdc26a4665a3028268249218d7cd230 = L.circleMarker(
+                [30.36929, 103.91636],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_901ef0dc9f86b87d4c3cce6ddb0efabf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76260bf7a52be4fc4c4d8da4df131eb6 = $(`<div id="html_76260bf7a52be4fc4c4d8da4df131eb6" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 5, Node 102</div>`)[0];
+                popup_901ef0dc9f86b87d4c3cce6ddb0efabf.setContent(html_76260bf7a52be4fc4c4d8da4df131eb6);
+            
+        
+
+        circle_marker_9bdc26a4665a3028268249218d7cd230.bindPopup(popup_901ef0dc9f86b87d4c3cce6ddb0efabf)
+        ;
+
+        
+    
+    
+            circle_marker_9bdc26a4665a3028268249218d7cd230.bindTooltip(
+                `<div>
+                     Customer 102 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf210db9565cba2e5dec06379c4c3c92 = L.circleMarker(
+                [30.40436, 103.87998],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_0c0400da148a0498f60be412b986c8ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5ab14e56f3ced23ed51ab46b876a1ef = $(`<div id="html_b5ab14e56f3ced23ed51ab46b876a1ef" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 6, Node 80</div>`)[0];
+                popup_0c0400da148a0498f60be412b986c8ee.setContent(html_b5ab14e56f3ced23ed51ab46b876a1ef);
+            
+        
+
+        circle_marker_bf210db9565cba2e5dec06379c4c3c92.bindPopup(popup_0c0400da148a0498f60be412b986c8ee)
+        ;
+
+        
+    
+    
+            circle_marker_bf210db9565cba2e5dec06379c4c3c92.bindTooltip(
+                `<div>
+                     Customer 80 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28cc24cc28502e60712e668e13f78bba = L.circleMarker(
+                [30.35929, 103.83827],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_c6a0439c92f4fc29d4290c7bb24ec65d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afb220ed2d2e340e0ae217aa04a513a5 = $(`<div id="html_afb220ed2d2e340e0ae217aa04a513a5" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 7, Node 86</div>`)[0];
+                popup_c6a0439c92f4fc29d4290c7bb24ec65d.setContent(html_afb220ed2d2e340e0ae217aa04a513a5);
+            
+        
+
+        circle_marker_28cc24cc28502e60712e668e13f78bba.bindPopup(popup_c6a0439c92f4fc29d4290c7bb24ec65d)
+        ;
+
+        
+    
+    
+            circle_marker_28cc24cc28502e60712e668e13f78bba.bindTooltip(
+                `<div>
+                     Customer 86 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e1e065bf9490d5b62bef8149809386ba = L.circleMarker(
+                [30.22105, 103.55317],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_a9fc133ca484cc86afff8d529d23ca5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c17f0138a59cd3ba0f468a1207b2c194 = $(`<div id="html_c17f0138a59cd3ba0f468a1207b2c194" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 8, Node 67</div>`)[0];
+                popup_a9fc133ca484cc86afff8d529d23ca5d.setContent(html_c17f0138a59cd3ba0f468a1207b2c194);
+            
+        
+
+        circle_marker_e1e065bf9490d5b62bef8149809386ba.bindPopup(popup_a9fc133ca484cc86afff8d529d23ca5d)
+        ;
+
+        
+    
+    
+            circle_marker_e1e065bf9490d5b62bef8149809386ba.bindTooltip(
+                `<div>
+                     Customer 67 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1728d5aaac7cc56cc77d9045c835347 = L.circleMarker(
+                [30.3388, 103.67759],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_f0f4f254dd054da389f471ad27335a4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2dee6b82809dad8af4fc886cb5c30ce = $(`<div id="html_e2dee6b82809dad8af4fc886cb5c30ce" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 9, Node 117</div>`)[0];
+                popup_f0f4f254dd054da389f471ad27335a4a.setContent(html_e2dee6b82809dad8af4fc886cb5c30ce);
+            
+        
+
+        circle_marker_a1728d5aaac7cc56cc77d9045c835347.bindPopup(popup_f0f4f254dd054da389f471ad27335a4a)
+        ;
+
+        
+    
+    
+            circle_marker_a1728d5aaac7cc56cc77d9045c835347.bindTooltip(
+                `<div>
+                     Customer 117 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f387da717c27d2d56a1bf42729cb571 = L.circleMarker(
+                [30.43744, 103.85023],
+                {"bubblingMouseEvents": true, "color": "#F1E3D8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1E3D8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_26f81598a16ec523e5c619ffbcd360de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e228205c82b9fdb8c83df091e98c1bf = $(`<div id="html_3e228205c82b9fdb8c83df091e98c1bf" style="width: 100.0%; height: 100.0%;">DRO Route #12, Stop 10, Node 10</div>`)[0];
+                popup_26f81598a16ec523e5c619ffbcd360de.setContent(html_3e228205c82b9fdb8c83df091e98c1bf);
+            
+        
+
+        circle_marker_9f387da717c27d2d56a1bf42729cb571.bindPopup(popup_26f81598a16ec523e5c619ffbcd360de)
+        ;
+
+        
+    
+    
+            circle_marker_9f387da717c27d2d56a1bf42729cb571.bindTooltip(
+                `<div>
+                     Customer 10 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f89b09322ec01b1e5897f0609b939f23 = L.polyline(
+                [[30.67, 104.07], [30.82753, 103.85923], [31.02964, 103.67853], [30.96116, 103.66127], [30.9264, 103.65474], [30.74874, 103.56104], [30.74705, 103.4601], [30.56884, 103.49853], [30.55912, 103.50587], [30.60254, 103.70156], [30.64491, 103.79696], [30.67, 104.07]],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#0245E0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_7abc508e7ac88746179ae8779ca487e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7509f02312937e0c41d65075f9abcfba = $(`<div id="html_7509f02312937e0c41d65075f9abcfba" style="width: 100.0%; height: 100.0%;">DRO Route #13</div>`)[0];
+                popup_7abc508e7ac88746179ae8779ca487e3.setContent(html_7509f02312937e0c41d65075f9abcfba);
+            
+        
+
+        poly_line_f89b09322ec01b1e5897f0609b939f23.bindPopup(popup_7abc508e7ac88746179ae8779ca487e3)
+        ;
+
+        
+    
+    
+            poly_line_f89b09322ec01b1e5897f0609b939f23.bindTooltip(
+                `<div>
+                     DRO Route #13 - 10 customers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_419c98abe64a5d76a9e1b76e3145b6ec = L.circleMarker(
+                [30.82753, 103.85923],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_9daae726eccf1049c9d34d4fd294ddcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7c0f6734ec28e6a6c1cad0e12491f36 = $(`<div id="html_c7c0f6734ec28e6a6c1cad0e12491f36" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 1, Node 19</div>`)[0];
+                popup_9daae726eccf1049c9d34d4fd294ddcf.setContent(html_c7c0f6734ec28e6a6c1cad0e12491f36);
+            
+        
+
+        circle_marker_419c98abe64a5d76a9e1b76e3145b6ec.bindPopup(popup_9daae726eccf1049c9d34d4fd294ddcf)
+        ;
+
+        
+    
+    
+            circle_marker_419c98abe64a5d76a9e1b76e3145b6ec.bindTooltip(
+                `<div>
+                     Customer 19 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3fd430edc6e65997f7bee00b1fa1d00c = L.circleMarker(
+                [31.02964, 103.67853],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_68189a22beb63a815ea0f893ca3f0fa5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03a7172c0dc0ca76c5d25a700f4d6210 = $(`<div id="html_03a7172c0dc0ca76c5d25a700f4d6210" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 2, Node 99</div>`)[0];
+                popup_68189a22beb63a815ea0f893ca3f0fa5.setContent(html_03a7172c0dc0ca76c5d25a700f4d6210);
+            
+        
+
+        circle_marker_3fd430edc6e65997f7bee00b1fa1d00c.bindPopup(popup_68189a22beb63a815ea0f893ca3f0fa5)
+        ;
+
+        
+    
+    
+            circle_marker_3fd430edc6e65997f7bee00b1fa1d00c.bindTooltip(
+                `<div>
+                     Customer 99 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbe259a70c401fbba69a0e41d0135950 = L.circleMarker(
+                [30.96116, 103.66127],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_83bac6376d1c69d9e82cec0b34856baa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98e494f2756aa0b7ef535b5884d17eec = $(`<div id="html_98e494f2756aa0b7ef535b5884d17eec" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 3, Node 20</div>`)[0];
+                popup_83bac6376d1c69d9e82cec0b34856baa.setContent(html_98e494f2756aa0b7ef535b5884d17eec);
+            
+        
+
+        circle_marker_cbe259a70c401fbba69a0e41d0135950.bindPopup(popup_83bac6376d1c69d9e82cec0b34856baa)
+        ;
+
+        
+    
+    
+            circle_marker_cbe259a70c401fbba69a0e41d0135950.bindTooltip(
+                `<div>
+                     Customer 20 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_286a0dca1a46fd10da3f97d7a043a6af = L.circleMarker(
+                [30.9264, 103.65474],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_d8074c08d587b22ef3194abf57574ae3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc3396b5d30086ac8897616a9ba8833e = $(`<div id="html_bc3396b5d30086ac8897616a9ba8833e" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 4, Node 35</div>`)[0];
+                popup_d8074c08d587b22ef3194abf57574ae3.setContent(html_bc3396b5d30086ac8897616a9ba8833e);
+            
+        
+
+        circle_marker_286a0dca1a46fd10da3f97d7a043a6af.bindPopup(popup_d8074c08d587b22ef3194abf57574ae3)
+        ;
+
+        
+    
+    
+            circle_marker_286a0dca1a46fd10da3f97d7a043a6af.bindTooltip(
+                `<div>
+                     Customer 35 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b48c948b4a9ecaf9da6dbca05cdf208 = L.circleMarker(
+                [30.74874, 103.56104],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_96c8695925ee38c0a804bd6f707632b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82b8659816ada6c818034b3d5d2d2e7e = $(`<div id="html_82b8659816ada6c818034b3d5d2d2e7e" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 5, Node 97</div>`)[0];
+                popup_96c8695925ee38c0a804bd6f707632b2.setContent(html_82b8659816ada6c818034b3d5d2d2e7e);
+            
+        
+
+        circle_marker_7b48c948b4a9ecaf9da6dbca05cdf208.bindPopup(popup_96c8695925ee38c0a804bd6f707632b2)
+        ;
+
+        
+    
+    
+            circle_marker_7b48c948b4a9ecaf9da6dbca05cdf208.bindTooltip(
+                `<div>
+                     Customer 97 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f1603cfb4e9d9a245f7465157f22c8c = L.circleMarker(
+                [30.74705, 103.4601],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_b5ae1285e05bd4a39d5b3f6bbe89a71e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dcc5038380c6390d9121cf26c0fe4df6 = $(`<div id="html_dcc5038380c6390d9121cf26c0fe4df6" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 6, Node 7</div>`)[0];
+                popup_b5ae1285e05bd4a39d5b3f6bbe89a71e.setContent(html_dcc5038380c6390d9121cf26c0fe4df6);
+            
+        
+
+        circle_marker_1f1603cfb4e9d9a245f7465157f22c8c.bindPopup(popup_b5ae1285e05bd4a39d5b3f6bbe89a71e)
+        ;
+
+        
+    
+    
+            circle_marker_1f1603cfb4e9d9a245f7465157f22c8c.bindTooltip(
+                `<div>
+                     Customer 7 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_828062596a1c16a9f6019de3bcb378f3 = L.circleMarker(
+                [30.56884, 103.49853],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_08b2c7def1d7b7e6e0e7765dee6b23cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_944685467b2b0d2ec45b1dc09436ecdb = $(`<div id="html_944685467b2b0d2ec45b1dc09436ecdb" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 7, Node 83</div>`)[0];
+                popup_08b2c7def1d7b7e6e0e7765dee6b23cb.setContent(html_944685467b2b0d2ec45b1dc09436ecdb);
+            
+        
+
+        circle_marker_828062596a1c16a9f6019de3bcb378f3.bindPopup(popup_08b2c7def1d7b7e6e0e7765dee6b23cb)
+        ;
+
+        
+    
+    
+            circle_marker_828062596a1c16a9f6019de3bcb378f3.bindTooltip(
+                `<div>
+                     Customer 83 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c7f4a948fe9e5dd6240a08e5c21e0ae = L.circleMarker(
+                [30.55912, 103.50587],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_3a2c73222bb44bf007c20653f8d39ebf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61f63eaa2ad1faf69568f97f8fa831d2 = $(`<div id="html_61f63eaa2ad1faf69568f97f8fa831d2" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 8, Node 107</div>`)[0];
+                popup_3a2c73222bb44bf007c20653f8d39ebf.setContent(html_61f63eaa2ad1faf69568f97f8fa831d2);
+            
+        
+
+        circle_marker_7c7f4a948fe9e5dd6240a08e5c21e0ae.bindPopup(popup_3a2c73222bb44bf007c20653f8d39ebf)
+        ;
+
+        
+    
+    
+            circle_marker_7c7f4a948fe9e5dd6240a08e5c21e0ae.bindTooltip(
+                `<div>
+                     Customer 107 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f39bf7c599068a0a0a115144dd97aae = L.circleMarker(
+                [30.60254, 103.70156],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_29dd7a9208575232ab47632e63ccc5a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b7a570a4aaf455aad59c533159ebc3e = $(`<div id="html_9b7a570a4aaf455aad59c533159ebc3e" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 9, Node 2</div>`)[0];
+                popup_29dd7a9208575232ab47632e63ccc5a7.setContent(html_9b7a570a4aaf455aad59c533159ebc3e);
+            
+        
+
+        circle_marker_6f39bf7c599068a0a0a115144dd97aae.bindPopup(popup_29dd7a9208575232ab47632e63ccc5a7)
+        ;
+
+        
+    
+    
+            circle_marker_6f39bf7c599068a0a0a115144dd97aae.bindTooltip(
+                `<div>
+                     Customer 2 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3de02be4f2a22ec7255259d12510499e = L.circleMarker(
+                [30.64491, 103.79696],
+                {"bubblingMouseEvents": true, "color": "#0245E0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0245E0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f6aa47d800a6c9f4ff43c75f04b6fcbd);
+        
+    
+        var popup_5a871e4694a8a3ada8149a0b4ebdbe52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35f98f9c253477de7ed9b4bb5bb72b80 = $(`<div id="html_35f98f9c253477de7ed9b4bb5bb72b80" style="width: 100.0%; height: 100.0%;">DRO Route #13, Stop 10, Node 112</div>`)[0];
+                popup_5a871e4694a8a3ada8149a0b4ebdbe52.setContent(html_35f98f9c253477de7ed9b4bb5bb72b80);
+            
+        
+
+        circle_marker_3de02be4f2a22ec7255259d12510499e.bindPopup(popup_5a871e4694a8a3ada8149a0b4ebdbe52)
+        ;
+
+        
+    
+    
+            circle_marker_3de02be4f2a22ec7255259d12510499e.bindTooltip(
+                `<div>
+                     Customer 112 (DRO Optimized)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
