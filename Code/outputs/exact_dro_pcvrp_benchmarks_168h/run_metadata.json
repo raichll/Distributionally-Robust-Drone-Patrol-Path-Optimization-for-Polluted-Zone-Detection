@@ -1,0 +1,21 @@
+{
+  "epsilon": 0.1,
+  "penalty_scale": 100000.0,
+  "resource_ratio": 0.55,
+  "heuristic_time_limit_seconds": 5.0,
+  "exact_time_limit_seconds": 60.0,
+  "heuristic_seeds": [
+    20260807,
+    20260808,
+    20260809
+  ],
+  "replicates_per_size": 3,
+  "exact_evaluator_max_abs_error": 2.4550547337298667e-05,
+  "data_source": "E:\\project\\truck\\outputs\\hourly_holdout_250\\training_prizes_168xn.npy",
+  "candidate_source": "E:\\project\\truck\\outputs\\hourly_holdout_250\\candidate_nodes.csv",
+  "training_periods": 168,
+  "training_window": "2024-04-10 00:00:00 to 2024-04-16 23:00:00",
+  "holdout_excluded": "2024-04-17 00:00:00 to 2024-04-18 23:00:00",
+  "ground_metric": "Euclidean L2 inside a 1-Wasserstein distance",
+  "support": "[0,1]^n"
+}

@@ -1,0 +1,26 @@
+{
+  "M": 4000.0,
+  "epsilon_grid": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+  ],
+  "selected_epsilon": 0.25,
+  "holdout_scheme": "train132_validate36_test48",
+  "selection_metric": "sample mean realized loss on the fixed validation set",
+  "training_hours": 132,
+  "validation_hours": 36,
+  "final_test_hours": 48,
+  "refit_after_validation": false,
+  "test_used_during_selection": false,
+  "pomo_candidates": 64,
+  "diverse_starts_per_model": 6,
+  "mns_seconds_per_start": 3.0
+}

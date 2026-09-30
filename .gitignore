@@ -1,0 +1,46 @@
+# LaTeX build products
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.spl
+*.synctex.gz
+*.toc
+
+# Editor and operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Generated experiment artifacts (final CSV/JSON tables already committed)
+Code/outputs/**/exact_models/
+Code/*.png
+Code/*.svg
+Code/*.pdf
+Code/**/*.log
+
+# Large/raw local datasets
+Code/data/
+Code/clu_data/*.parquet
+Code/clu_data/*.xlsx
+Code/clu_data/*raw*.csv
+
+# Local scratch and generated archives
+temp/
+tmp/
+*.zip

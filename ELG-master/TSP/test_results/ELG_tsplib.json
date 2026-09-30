@@ -1,1 +1,0 @@
-[{"instance": "pr226", "optimal": 80369.0, "record": [{"run_idx": 0, "best_cost": 81221.0, "scale": 226, "gap": 0.010601102415110303}]}, {"instance": "pr264", "optimal": 49135.0, "record": [{"run_idx": 0, "best_cost": 50056.0, "scale": 264, "gap": 0.018744275974356364}]}]

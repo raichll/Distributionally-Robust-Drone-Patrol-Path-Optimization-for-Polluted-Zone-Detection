@@ -1,0 +1,32 @@
+{
+  "data_start": "2024-04-10 00:00:00",
+  "data_end": "2024-04-18 23:00:00",
+  "training_hours": 120,
+  "training_end": "2024-04-14 23:00:00",
+  "holdout_hours": 96,
+  "holdout_start": "2024-04-15 00:00:00",
+  "candidate_nodes": 250,
+  "candidate_discovery": "hourly clustering and temporal merging using training hours only",
+  "sample_ratio_per_hour": 0.01,
+  "speed_threshold": 5.0,
+  "coordinate_field": "coord (GCJ-02)",
+  "bounds": [
+    103.4,
+    104.55,
+    30.1,
+    31.2
+  ],
+  "merge_radius_m": 400.0,
+  "assignment_radius_m": 600.0,
+  "minimum_training_hours": 3,
+  "minimum_candidate_spacing_m": 250.0,
+  "normalization": "hourly assigned count divided by the maximum node count in that hour",
+  "zero_count_hours": 0,
+  "mean_assignment_rate_pct": 84.07115820631905,
+  "processing": {
+    "total_raw_rows": 124313101,
+    "total_sampled_rows": 1062224,
+    "total_selected_rows": 711779,
+    "total_hourly_clusters": 23224
+  }
+}

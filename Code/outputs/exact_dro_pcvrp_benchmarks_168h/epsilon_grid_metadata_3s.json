@@ -1,0 +1,21 @@
+{
+  "optimization_epsilon_grid": [
+    0.0,
+    0.025,
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "common_reporting_epsilon": 0.1,
+  "instances": 10,
+  "seeds": [
+    20260807,
+    20260808,
+    20260809
+  ],
+  "time_limit_seconds": 3.0,
+  "penalty_scale": 25000.0,
+  "resource_ratio": 0.75,
+  "data_source": "training_prizes_168xn.npy"
+}

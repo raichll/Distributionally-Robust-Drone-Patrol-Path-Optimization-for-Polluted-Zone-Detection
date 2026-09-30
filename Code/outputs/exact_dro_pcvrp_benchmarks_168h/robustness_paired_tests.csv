@@ -1,0 +1,2 @@
+reference,benchmark,paired_runs,mean_objective_reduction,mean_reduction_pct,wins,ties,losses,wilcoxon_one_sided_p
+POMO-NS,POMO-NS-nominal,30,365.46378622718987,0.8246102280432174,18,7,5,0.015339493085771563
